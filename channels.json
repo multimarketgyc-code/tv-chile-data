@@ -405,5 +405,14 @@
     "category": "pago",
     "direct": true,
     "domain": "paramountplus.com"
+  },
+  {
+    "id": "prueba_arquitectura_nueva",
+    "num": "•",
+    "name": "PRUEBA (borrar)",
+    "url": "https://example.com",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "example.com"
   }
 ]
