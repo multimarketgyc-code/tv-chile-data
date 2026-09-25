@@ -1,0 +1,409 @@
+[
+  {
+    "id": "tvn",
+    "num": "7",
+    "name": "TVN",
+    "url": "https://www.tvn.cl/en-vivo",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "tvn.cl"
+  },
+  {
+    "id": "mega",
+    "num": "9",
+    "name": "Mega",
+    "url": "https://www.mega.cl/senal-en-vivo/",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "mega.cl"
+  },
+  {
+    "id": "chv",
+    "num": "11",
+    "name": "Chilevisión",
+    "url": "https://www.chilevision.cl/senal-online",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "chilevision.cl"
+  },
+  {
+    "id": "c13",
+    "num": "13",
+    "name": "Canal 13",
+    "url": "https://www.13.cl/en-vivo",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "13.cl"
+  },
+  {
+    "id": "lared",
+    "num": "4",
+    "name": "La Red",
+    "url": "https://www.lared.cl",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "lared.cl"
+  },
+  {
+    "id": "megan",
+    "num": "9.1",
+    "name": "Meganoticias",
+    "url": "https://www.meganoticias.cl/senal-en-vivo/meganoticias/",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "meganoticias.cl"
+  },
+  {
+    "id": "tvmas",
+    "num": "+",
+    "name": "TV+ (antes UCV)",
+    "url": "https://www.tvmas.tv/",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "tvmas.tv"
+  },
+  {
+    "id": "24horas",
+    "num": "24",
+    "name": "24 Horas (noticias TVN)",
+    "url": "https://www.24horas.cl/envivo",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "24horas.cl"
+  },
+  {
+    "id": "chvnoticias247",
+    "num": "•",
+    "name": "CHV Noticias",
+    "url": "https://www.youtube.com/channel/UCRsUoZYC1ULUspipMRnMhwg/streams",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "youtube.com"
+  },
+  {
+    "id": "t13",
+    "num": "13.1",
+    "name": "T13 En Vivo",
+    "url": "https://www.t13.cl/en-vivo",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "13.cl"
+  },
+  {
+    "id": "cnnchile",
+    "num": "•",
+    "name": "CNN Chile",
+    "url": "https://www.cnnchile.com/page/en-vivo/",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "cnnchile.com"
+  },
+  {
+    "id": "biobiotv",
+    "num": "•",
+    "name": "Bío-Bío TV",
+    "url": "https://www.biobiochile.cl/biobiotv/",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "biobiochile.cl"
+  },
+  {
+    "id": "13cultura",
+    "num": "•",
+    "name": "13 Cultura",
+    "url": "https://www.13.cl/cultura13",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "13.cl"
+  },
+  {
+    "id": "vix",
+    "num": "•",
+    "name": "ViX (catálogo enorme en español)",
+    "url": "https://vix.com/es-es/ondemand",
+    "category": "peliculas",
+    "direct": true,
+    "domain": "vix.com"
+  },
+  {
+    "id": "mercadoplay",
+    "num": "•",
+    "name": "Mercado Play",
+    "url": "https://play.mercadolibre.cl/",
+    "category": "peliculas",
+    "direct": true,
+    "domain": "mercadolibre.cl"
+  },
+  {
+    "id": "pluto",
+    "num": "•",
+    "name": "Pluto TV",
+    "url": "https://pluto.tv/",
+    "category": "peliculas",
+    "direct": true,
+    "domain": "pluto.tv"
+  },
+  {
+    "id": "plex",
+    "num": "•",
+    "name": "Plex (TV gratis)",
+    "url": "https://watch.plex.tv/es",
+    "category": "peliculas",
+    "direct": true,
+    "domain": "plex.tv"
+  },
+  {
+    "id": "cinear",
+    "num": "•",
+    "name": "CINE.AR Play (cine argentino)",
+    "url": "https://play.cine.ar/",
+    "category": "peliculas",
+    "direct": true,
+    "domain": "cine.ar"
+  },
+  {
+    "id": "rakutentv",
+    "num": "•",
+    "name": "Rakuten TV (fuentes contradicen si llega a Chile)",
+    "url": "https://www.rakuten.tv/es/gardens/avod-fast",
+    "category": "peliculas",
+    "direct": true,
+    "domain": "rakuten.tv"
+  },
+  {
+    "id": "cinetel",
+    "num": "•",
+    "name": "Cinetel (cine en español, catálogo)",
+    "url": "https://www.youtube.com/channel/UCRAFplJ4UGiN86otx8BS7EA/videos",
+    "category": "peliculas",
+    "direct": true,
+    "domain": "youtube.com"
+  },
+  {
+    "id": "swenfilms",
+    "num": "•",
+    "name": "Swen Films (películas completas en español)",
+    "url": "https://www.youtube.com/@SwenFilms/videos",
+    "category": "peliculas",
+    "direct": true,
+    "domain": "youtube.com"
+  },
+  {
+    "id": "filmisnowplus",
+    "num": "•",
+    "name": "FilmIsNow Movies+ (películas español latino)",
+    "url": "https://www.youtube.com/@FilmIsNowMoviesPlus/videos",
+    "category": "peliculas",
+    "direct": true,
+    "domain": "youtube.com"
+  },
+  {
+    "id": "mrbeast",
+    "num": "•",
+    "name": "MrBeast",
+    "url": "https://www.youtube.com/@MrBeast/videos",
+    "category": "entretenimiento",
+    "direct": true,
+    "domain": "youtube.com"
+  },
+  {
+    "id": "france24",
+    "num": "●",
+    "name": "France 24 Español (noticias 24/7 real)",
+    "url": "https://www.youtube.com/embed/live_stream?channel=UCUdOoVWuWmgo1wByzcsyKDQ&autoplay=1",
+    "category": "noticias",
+    "domain": "youtube.com"
+  },
+  {
+    "id": "euronews",
+    "num": "●",
+    "name": "Euronews en Español (noticias 24/7 real)",
+    "url": "https://www.youtube.com/embed/live_stream?channel=UCyoGb3SMlTlB8CLGVH4c8Rw&autoplay=1",
+    "category": "noticias",
+    "domain": "youtube.com"
+  },
+  {
+    "id": "natgeoes",
+    "num": "•",
+    "name": "National Geographic España (documentales)",
+    "url": "https://www.youtube.com/channel/UCpyYUq9kcBMLPlfE8EzguvA/videos",
+    "category": "documentales",
+    "direct": true,
+    "domain": "nationalgeographic.com"
+  },
+  {
+    "id": "natgeolat",
+    "num": "•",
+    "name": "National Geographic Latinoamérica",
+    "url": "https://www.youtube.com/channel/UCnmlG_YzRYzWzJbW2oDn_ow/videos",
+    "category": "documentales",
+    "direct": true,
+    "domain": "nationalgeographic.com"
+  },
+  {
+    "id": "dwdoc",
+    "num": "•",
+    "name": "DW Documental (Deutsche Welle)",
+    "url": "https://www.youtube.com/dwdocumental",
+    "category": "documentales",
+    "direct": true,
+    "domain": "youtube.com"
+  },
+  {
+    "id": "realstories",
+    "num": "•",
+    "name": "Real Stories",
+    "url": "https://www.youtube.com/@RealStories/videos",
+    "category": "documentales",
+    "direct": true,
+    "domain": "youtube.com"
+  },
+  {
+    "id": "bbcearth",
+    "num": "•",
+    "name": "BBC Earth (naturaleza, oficial)",
+    "url": "https://www.youtube.com/@BBCEarth/videos",
+    "category": "documentales",
+    "direct": true,
+    "domain": "youtube.com"
+  },
+  {
+    "id": "plutokids",
+    "num": "•",
+    "name": "Pluto TV Kids (Forever Kids, El Reino Infantil)",
+    "url": "https://pluto.tv/",
+    "category": "infantil",
+    "direct": true,
+    "domain": "pluto.tv"
+  },
+  {
+    "id": "kidoodle",
+    "num": "•",
+    "name": "Kidoodle.TV (50.000+ episodios, sin registro)",
+    "url": "https://watch.kidoodle.tv/",
+    "category": "infantil",
+    "direct": true,
+    "domain": "kidoodle.tv"
+  },
+  {
+    "id": "canelakids",
+    "num": "•",
+    "name": "Canela Kids (puede estar geobloqueado)",
+    "url": "https://www.canela.tv/kids",
+    "category": "infantil",
+    "direct": true,
+    "domain": "canela.tv"
+  },
+  {
+    "id": "cntvinfantil",
+    "num": "•",
+    "name": "CNTV Infantil (gobierno de Chile, oficial)",
+    "url": "https://cntvinfantil.cl/",
+    "category": "infantil",
+    "direct": true,
+    "domain": "cntvinfantil.cl"
+  },
+  {
+    "id": "booba",
+    "num": "●",
+    "name": "Booba 24/7 (dibujos, sin diálogos, 100% integrado)",
+    "url": "https://www.youtube.com/embed/live_stream?channel=UCex-Z2_3iZ6_FhzAM4EWExg&autoplay=1",
+    "category": "infantil",
+    "domain": "youtube.com"
+  },
+  {
+    "id": "peppapig",
+    "num": "•",
+    "name": "Peppa Pig oficial (español latino)",
+    "url": "https://www.youtube.com/channel/UCiy3ZPeWK7_GS2A6spcZ2iA/videos",
+    "category": "infantil",
+    "direct": true,
+    "domain": "youtube.com"
+  },
+  {
+    "id": "spongebob",
+    "num": "▶",
+    "name": "SpongeBob 60 min (Nicktoons, oficial)",
+    "url": "https://www.youtube.com/embed/KduWmY-cFSA?autoplay=1",
+    "category": "infantil",
+    "domain": "youtube.com"
+  },
+  {
+    "id": "kidsvid2",
+    "num": "▶",
+    "name": "Video infantil 2",
+    "url": "https://www.youtube.com/embed/yXzF6FcdGqE?autoplay=1",
+    "category": "infantil",
+    "domain": "youtube.com"
+  },
+  {
+    "id": "kidsvid3",
+    "num": "▶",
+    "name": "Video infantil 3",
+    "url": "https://www.youtube.com/embed/gGU5tpavDVQ?autoplay=1",
+    "category": "infantil",
+    "domain": "youtube.com"
+  },
+  {
+    "id": "cimawebcam",
+    "num": "●",
+    "name": "Plaza Italia en vivo (Galería CIMA, real 24/7)",
+    "url": "https://www.youtube.com/embed/live_stream?channel=UC4GOcOKkEefz5NamN4WyMFg&autoplay=1",
+    "category": "webcams",
+    "domain": "youtube.com"
+  },
+  {
+    "id": "laciudadfm",
+    "num": "♫",
+    "name": "La Ciudad FM (80s/90s)",
+    "url": "https://laciudadfm.cl/",
+    "category": "radio",
+    "direct": true,
+    "domain": "laciudadfm.cl"
+  },
+  {
+    "id": "netflix",
+    "num": "•",
+    "name": "Netflix",
+    "url": "https://www.netflix.com/login",
+    "category": "pago",
+    "direct": true,
+    "domain": "netflix.com"
+  },
+  {
+    "id": "hbomax",
+    "num": "•",
+    "name": "HBO Max",
+    "url": "https://www.hbomax.com/sign-in",
+    "category": "pago",
+    "direct": true,
+    "domain": "hbomax.com"
+  },
+  {
+    "id": "disneyplus",
+    "num": "•",
+    "name": "Disney+ (incluye Star: Fox y Universal)",
+    "url": "https://www.disneyplus.com/login",
+    "category": "pago",
+    "direct": true,
+    "domain": "disneyplus.com"
+  },
+  {
+    "id": "primevideo",
+    "num": "•",
+    "name": "Prime Video",
+    "url": "https://www.primevideo.com",
+    "category": "pago",
+    "direct": true,
+    "domain": "primevideo.com"
+  },
+  {
+    "id": "paramount",
+    "num": "•",
+    "name": "Paramount+",
+    "url": "https://www.paramountplus.com/account/signin/",
+    "category": "pago",
+    "direct": true,
+    "domain": "paramountplus.com"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "bc92816d-0a45-4802-9ced-0a0355518b42",
+    "label": "Chrome en Mac",
+    "firstSeen": "2026-09-23T02:30:19.800Z"
+  },
+  {
+    "id": "2c776e01-8505-42c6-9531-6487706ec41c",
+    "label": "Chrome en Mac",
+    "firstSeen": "2026-09-23T02:39:32.818Z"
+  },
+  {
+    "id": "46fd0220-bbe6-4560-8240-86b3700aa49d",
+    "label": "Safari en iPhone",
+    "firstSeen": "2026-09-23T03:22:00.189Z"
+  },
+  {
+    "id": "b096f8ad-bd4c-46bc-b485-09025d853cd3",
+    "label": "Safari en iPhone",
+    "firstSeen": "2026-09-23T03:22:39.821Z"
+  },
+  {
+    "id": "baa56c8f-ebaa-4109-b529-1553ff11446f",
+    "label": "Chrome en Mac",
+    "firstSeen": "2026-09-23T22:19:19.712Z"
+  },
+  {
+    "id": "53f990d5-f051-4d99-b06a-9f94db446502",
+    "label": "Chrome en Mac",
+    "firstSeen": "2026-09-23T23:39:33.917Z"
+  },
+  {
+    "id": "3c43bbdf-eed4-4d9c-bbc9-2bf5b2ffc456",
+    "label": "Chrome en Mac",
+    "firstSeen": "2026-09-23T23:40:21.485Z"
+  },
+  {
+    "id": "3ea69ff4-fc51-4894-9a39-2cd2700f7aed",
+    "label": "Chrome en Mac",
+    "firstSeen": "2026-09-23T23:40:35.043Z"
+  }
+]
