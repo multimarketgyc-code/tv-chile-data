@@ -1,14 +1,5 @@
 [
   {
-    "id": "cnnchile",
-    "num": "•",
-    "name": "CNN Chile",
-    "url": "https://www.cnnchile.com/page/en-vivo/",
-    "category": "nacionales",
-    "direct": true,
-    "domain": "cnnchile.com"
-  },
-  {
     "id": "biobiotv",
     "num": "•",
     "name": "Bío-Bío TV",
