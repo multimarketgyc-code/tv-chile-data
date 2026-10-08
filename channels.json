@@ -1,14 +1,5 @@
 [
   {
-    "id": "t13",
-    "num": "13.1",
-    "name": "T13 En Vivo",
-    "url": "https://www.t13.cl/en-vivo",
-    "category": "nacionales",
-    "direct": true,
-    "domain": "13.cl"
-  },
-  {
     "id": "cnnchile",
     "num": "•",
     "name": "CNN Chile",
