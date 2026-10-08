@@ -228,14 +228,6 @@
     "domain": "youtube.com"
   },
   {
-    "id": "cimawebcam",
-    "num": "●",
-    "name": "Plaza Italia en vivo (Galería CIMA, real 24/7)",
-    "url": "https://www.youtube.com/embed/live_stream?channel=UC4GOcOKkEefz5NamN4WyMFg&autoplay=1",
-    "category": "webcams",
-    "domain": "youtube.com"
-  },
-  {
     "id": "laciudadfm",
     "num": "♫",
     "name": "La Ciudad FM (80s/90s)",
