@@ -371,5 +371,13 @@
     "url": "https://www.youtube.com/embed/live_stream?channel=UC-2KSeUU5SMCX6XLRD-AEvw&autoplay=1",
     "category": "webcams",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791501890801",
+    "num": "▶",
+    "name": "Teletrece",
+    "url": "https://www.youtube.com/embed/oy1dvCRd42s?autoplay=1",
+    "category": "nacionales",
+    "domain": "youtube.com"
   }
 ]
