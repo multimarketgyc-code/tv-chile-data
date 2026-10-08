@@ -1,14 +1,5 @@
 [
   {
-    "id": "biobiotv",
-    "num": "•",
-    "name": "Bío-Bío TV",
-    "url": "https://www.biobiochile.cl/biobiotv/",
-    "category": "nacionales",
-    "direct": true,
-    "domain": "biobiochile.cl"
-  },
-  {
     "id": "13cultura",
     "num": "•",
     "name": "13 Cultura",
