@@ -323,29 +323,5 @@
     "url": "https://www.youtube.com/embed/live_stream?channel=UCkccyEbqhhM3uKOI6Shm-4Q&autoplay=1",
     "category": "noticias",
     "domain": "youtube.com"
-  },
-  {
-    "id": "yt_24horas",
-    "num": "●",
-    "name": "24 Horas TVN (en vivo aquí)",
-    "url": "https://www.youtube.com/embed/live_stream?channel=UCTXNz3gjAypWp3EhlIATEJQ&autoplay=1",
-    "category": "noticias",
-    "domain": "youtube.com"
-  },
-  {
-    "id": "yt_chvnoticias",
-    "num": "●",
-    "name": "CHV Noticias (en vivo aquí)",
-    "url": "https://www.youtube.com/embed/live_stream?channel=UCRsUoZYC1ULUspipMRnMhwg&autoplay=1",
-    "category": "noticias",
-    "domain": "youtube.com"
-  },
-  {
-    "id": "yt_t13",
-    "num": "●",
-    "name": "T13 (en vivo aquí)",
-    "url": "https://www.youtube.com/embed/live_stream?channel=UCsRnhjcUCR78Q3Ud6OXCTNg&autoplay=1",
-    "category": "noticias",
-    "domain": "youtube.com"
   }
 ]
