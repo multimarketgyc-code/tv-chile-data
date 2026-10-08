@@ -395,5 +395,13 @@
     "url": "https://www.youtube.com/embed/v4E0JxdziJM?autoplay=1",
     "category": "peliculas",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791503489412",
+    "num": "▶",
+    "name": "Bio Bio",
+    "url": "https://www.youtube.com/embed/WRJK27H3Zi0?autoplay=1",
+    "category": "nacionales",
+    "domain": "youtube.com"
   }
 ]
