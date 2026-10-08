@@ -349,14 +349,6 @@
     "domain": "youtube.com"
   },
   {
-    "id": "yt_directonatura",
-    "num": "●",
-    "name": "Directo Natura, fauna salvaje 24/7 (en vivo aquí)",
-    "url": "https://www.youtube.com/embed/live_stream?channel=UCKqAJfYEVCPLbdgOm8QqSQg&autoplay=1",
-    "category": "webcams",
-    "domain": "youtube.com"
-  },
-  {
     "id": "yt_explore",
     "num": "●",
     "name": "Explore Live Nature Cams (en vivo aquí)",
