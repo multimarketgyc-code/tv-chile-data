@@ -323,5 +323,13 @@
     "url": "https://www.youtube.com/embed/live_stream?channel=UCkccyEbqhhM3uKOI6Shm-4Q&autoplay=1",
     "category": "noticias",
     "domain": "youtube.com"
+  },
+  {
+    "id": "yt_dwespanol",
+    "num": "●",
+    "name": "DW Español (noticias 24/7, en vivo aquí)",
+    "url": "https://www.youtube.com/embed/live_stream?channel=UCT4Jg8h03dD0iN3Pb5L0PMA&autoplay=1",
+    "category": "noticias",
+    "domain": "youtube.com"
   }
 ]
