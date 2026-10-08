@@ -288,5 +288,14 @@
     "category": "pago",
     "direct": true,
     "domain": "paramountplus.com"
+  },
+  {
+    "id": "custom_1791422009756",
+    "num": "•",
+    "name": "CANAL 13 EN VIVO",
+    "url": "https://rudo.video/live/t13?volume=0&mute=1&autost%E2%80%A6vbmxpbmVhciZzej00MDB4NjAmbWkiLCJ0aW1lIjpbNjBdfX0=%27",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "rudo.video"
   }
 ]
