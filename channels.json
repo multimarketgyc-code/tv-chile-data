@@ -54,15 +54,6 @@
     "domain": "meganoticias.cl"
   },
   {
-    "id": "tvmas",
-    "num": "+",
-    "name": "TV+ (antes UCV)",
-    "url": "https://www.tvmas.tv/",
-    "category": "nacionales",
-    "direct": true,
-    "domain": "tvmas.tv"
-  },
-  {
     "id": "24horas",
     "num": "24",
     "name": "24 Horas (noticias TVN)",
