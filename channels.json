@@ -379,5 +379,13 @@
     "url": "https://www.youtube.com/embed/oy1dvCRd42s?autoplay=1",
     "category": "nacionales",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791502114677",
+    "num": "▶",
+    "name": "TVN CHILE",
+    "url": "https://www.youtube.com/embed/8LZkRQhb69Y?autoplay=1",
+    "category": "nacionales",
+    "domain": "youtube.com"
   }
 ]
