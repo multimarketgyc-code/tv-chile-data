@@ -9,15 +9,6 @@
     "domain": "tvn.cl"
   },
   {
-    "id": "chv",
-    "num": "11",
-    "name": "Chilevisión",
-    "url": "https://www.chilevision.cl/senal-online",
-    "category": "nacionales",
-    "direct": true,
-    "domain": "chilevision.cl"
-  },
-  {
     "id": "lared",
     "num": "4",
     "name": "La Red",
