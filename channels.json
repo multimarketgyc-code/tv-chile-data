@@ -18,15 +18,6 @@
     "domain": "chilevision.cl"
   },
   {
-    "id": "c13",
-    "num": "13",
-    "name": "Canal 13",
-    "url": "https://www.13.cl/en-vivo",
-    "category": "nacionales",
-    "direct": true,
-    "domain": "13.cl"
-  },
-  {
     "id": "lared",
     "num": "4",
     "name": "La Red",
