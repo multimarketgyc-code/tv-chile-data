@@ -3,5 +3,10 @@
     "id": "bc92816d-0a45-4802-9ced-0a0355518b42",
     "label": "Chrome en Mac",
     "firstSeen": "2026-09-23T02:30:19.800Z"
+  },
+  {
+    "id": "f400333c-4e4c-41e5-86f7-cb1186ff3e0d",
+    "label": "Chrome en Dispositivo",
+    "firstSeen": "2026-10-08T01:50:08.306Z"
   }
 ]
