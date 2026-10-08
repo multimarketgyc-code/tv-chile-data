@@ -8,5 +8,10 @@
     "id": "f400333c-4e4c-41e5-86f7-cb1186ff3e0d",
     "label": "Chrome en Dispositivo",
     "firstSeen": "2026-10-08T01:50:08.306Z"
+  },
+  {
+    "id": "b096f8ad-bd4c-46bc-b485-09025d853cd3",
+    "label": "Safari en iPhone",
+    "firstSeen": "2026-10-08T13:22:55.503Z"
   }
 ]
