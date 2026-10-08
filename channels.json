@@ -1,14 +1,5 @@
 [
   {
-    "id": "lared",
-    "num": "4",
-    "name": "La Red",
-    "url": "https://www.lared.cl",
-    "category": "nacionales",
-    "direct": true,
-    "domain": "lared.cl"
-  },
-  {
     "id": "megan",
     "num": "9.1",
     "name": "Meganoticias",
