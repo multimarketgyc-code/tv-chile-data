@@ -1,14 +1,5 @@
 [
   {
-    "id": "24horas",
-    "num": "24",
-    "name": "24 Horas (noticias TVN)",
-    "url": "https://www.24horas.cl/envivo",
-    "category": "nacionales",
-    "direct": true,
-    "domain": "24horas.cl"
-  },
-  {
     "id": "chvnoticias247",
     "num": "•",
     "name": "CHV Noticias",
