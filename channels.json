@@ -387,5 +387,13 @@
     "url": "https://www.youtube.com/embed/Rege-CYcPJ0?autoplay=1",
     "category": "entretenimiento",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791503319037",
+    "num": "▶",
+    "name": "Sun Películas y Film Plus - Español",
+    "url": "https://www.youtube.com/embed/v4E0JxdziJM?autoplay=1",
+    "category": "peliculas",
+    "domain": "youtube.com"
   }
 ]
