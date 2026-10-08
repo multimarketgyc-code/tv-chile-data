@@ -297,5 +297,14 @@
     "category": "nacionales",
     "direct": true,
     "domain": "rudo.video"
+  },
+  {
+    "id": "custom_1791422057703",
+    "num": "•",
+    "name": "MEGA EN VIVO",
+    "url": "https://rudo.video/live/mega?unmute=1",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "rudo.video"
   }
 ]
