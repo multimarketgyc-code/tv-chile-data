@@ -1,14 +1,5 @@
 [
   {
-    "id": "tvn",
-    "num": "7",
-    "name": "TVN",
-    "url": "https://www.tvn.cl/en-vivo",
-    "category": "nacionales",
-    "direct": true,
-    "domain": "tvn.cl"
-  },
-  {
     "id": "lared",
     "num": "4",
     "name": "La Red",
