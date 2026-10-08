@@ -1,14 +1,5 @@
 [
   {
-    "id": "megan",
-    "num": "9.1",
-    "name": "Meganoticias",
-    "url": "https://www.meganoticias.cl/senal-en-vivo/meganoticias/",
-    "category": "nacionales",
-    "direct": true,
-    "domain": "meganoticias.cl"
-  },
-  {
     "id": "24horas",
     "num": "24",
     "name": "24 Horas (noticias TVN)",
