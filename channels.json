@@ -9,15 +9,6 @@
     "domain": "tvn.cl"
   },
   {
-    "id": "mega",
-    "num": "9",
-    "name": "Mega",
-    "url": "https://www.mega.cl/senal-en-vivo/",
-    "category": "nacionales",
-    "direct": true,
-    "domain": "mega.cl"
-  },
-  {
     "id": "chv",
     "num": "11",
     "name": "Chilevisión",
