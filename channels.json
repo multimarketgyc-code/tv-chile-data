@@ -306,5 +306,14 @@
     "category": "nacionales",
     "direct": true,
     "domain": "rudo.video"
+  },
+  {
+    "id": "custom_1791422273354",
+    "num": "•",
+    "name": "LIVE TV+",
+    "url": "https://rudo.video/live/tvmas",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "rudo.video"
   }
 ]
