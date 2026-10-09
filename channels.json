@@ -512,5 +512,13 @@
     "url": "https://www.youtube.com/embed/OS94xU5WhrQ?autoplay=1",
     "category": "documentales",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791561161264",
+    "num": "▶",
+    "name": "PLAYA SONIDO / IMAGEN 🏖️",
+    "url": "https://www.youtube.com/embed/Thtj8Ht7Z_c?autoplay=1",
+    "category": "entretenimiento",
+    "domain": "youtube.com"
   }
 ]
