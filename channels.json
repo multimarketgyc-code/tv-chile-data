@@ -479,5 +479,14 @@
     "category": "peliculas",
     "direct": true,
     "domain": "vtm1.msinteractiva.com"
+  },
+  {
+    "id": "custom_1791510396168",
+    "num": "•",
+    "name": "13 CULTURA",
+    "url": "https://dai.google.com/linear/hls/pa/event/GI-9cp_bT8KcerLpZwkuhw/stream/3ffd1cbe-67d8-435b-9203-2950b72845ca:SCL2/master.m3u8",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "dai.google.com"
   }
 ]
