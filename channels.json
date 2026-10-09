@@ -403,5 +403,13 @@
     "url": "https://www.youtube.com/embed/WRJK27H3Zi0?autoplay=1",
     "category": "nacionales",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791504712408",
+    "num": "▶",
+    "name": "ADN Chile",
+    "url": "https://www.youtube.com/embed/XeU2hwj6-QM?autoplay=1",
+    "category": "nacionales",
+    "domain": "youtube.com"
   }
 ]
