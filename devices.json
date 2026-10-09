@@ -18,5 +18,10 @@
     "id": "3c43bbdf-eed4-4d9c-bbc9-2bf5b2ffc456",
     "label": "Chrome en Mac",
     "firstSeen": "2026-10-08T16:12:55.598Z"
+  },
+  {
+    "id": "2b12b1bf-9c61-48c8-b49e-ba11bc8c67da",
+    "label": "Chrome en Android",
+    "firstSeen": "2026-10-09T02:01:25.005Z"
   }
 ]
