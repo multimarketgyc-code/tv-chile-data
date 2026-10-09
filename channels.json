@@ -428,5 +428,13 @@
     "url": "https://www.youtube.com/embed/4c96KRQLKrM?autoplay=1",
     "category": "entretenimiento",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791505616116",
+    "num": "▶",
+    "name": "Super Toons TV - Dibujos Animados en Español",
+    "url": "https://www.youtube.com/embed/h7-huTlkU4Y?autoplay=1",
+    "category": "infantil",
+    "domain": "youtube.com"
   }
 ]
