@@ -472,5 +472,13 @@
     "category": "nacionales",
     "direct": true,
     "domain": "dai.google.com"
+  },
+  {
+    "id": "custom_1791556843892",
+    "num": "▶",
+    "name": "TLC Latinoamérica",
+    "url": "https://www.youtube.com/embed/7XUQgnvJLfA?autoplay=1",
+    "category": "entretenimiento",
+    "domain": "youtube.com"
   }
 ]
