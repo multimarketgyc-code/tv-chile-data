@@ -411,5 +411,14 @@
     "url": "https://www.youtube.com/embed/XeU2hwj6-QM?autoplay=1",
     "category": "nacionales",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791504745969",
+    "num": "•",
+    "name": "Suspenso Channel",
+    "url": "https://www.youtube.com/watch?v=oxX_new26jw",
+    "category": "peliculas",
+    "direct": true,
+    "domain": "youtube.com"
   }
 ]
