@@ -536,5 +536,13 @@
     "category": "entretenimiento",
     "direct": true,
     "domain": "channel01-onlymex.akamaized.net"
+  },
+  {
+    "id": "custom_1791562910908",
+    "num": "▶",
+    "name": "Televisa Guadalajara",
+    "url": "https://www.youtube.com/embed/uhy_aOcO4xo?autoplay=1",
+    "category": "nacionales",
+    "domain": "youtube.com"
   }
 ]
