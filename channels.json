@@ -371,11 +371,10 @@
   },
   {
     "id": "custom_1791504745969",
-    "num": "•",
+    "num": "▶",
     "name": "Suspenso Channel",
-    "url": "https://www.youtube.com/watch?v=oxX_new26jw",
+    "url": "https://www.youtube.com/embed/oxX_new26jw?autoplay=1",
     "category": "peliculas",
-    "direct": true,
     "domain": "youtube.com"
   },
   {
