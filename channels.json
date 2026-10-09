@@ -488,5 +488,13 @@
     "url": "https://www.youtube.com/embed/EYDd5U7fQXQ?autoplay=1",
     "category": "documentales",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791560605489",
+    "num": "▶",
+    "name": "Beautiful Places 4K",
+    "url": "https://www.youtube.com/embed/-D9F0zr-ieA?autoplay=1",
+    "category": "documentales",
+    "domain": "youtube.com"
   }
 ]
