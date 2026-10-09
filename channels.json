@@ -444,5 +444,13 @@
     "url": "https://www.youtube.com/embed/_UcanZG8o3g?autoplay=1",
     "category": "infantil",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791505767441",
+    "num": "▶",
+    "name": "WB Kids Latino",
+    "url": "https://www.youtube.com/embed/1e5d4mBbBxU?autoplay=1",
+    "category": "infantil",
+    "domain": "youtube.com"
   }
 ]
