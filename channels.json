@@ -27,15 +27,6 @@
     "domain": "plex.tv"
   },
   {
-    "id": "cinear",
-    "num": "•",
-    "name": "CINE.AR Play (cine argentino)",
-    "url": "https://play.cine.ar/",
-    "category": "peliculas",
-    "direct": true,
-    "domain": "cine.ar"
-  },
-  {
     "id": "rakutentv",
     "num": "•",
     "name": "Rakuten TV (fuentes contradicen si llega a Chile)",
