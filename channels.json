@@ -420,5 +420,13 @@
     "category": "peliculas",
     "direct": true,
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791505512449",
+    "num": "▶",
+    "name": "Bluey - Español Canal Oficial",
+    "url": "https://www.youtube.com/embed/4c96KRQLKrM?autoplay=1",
+    "category": "entretenimiento",
+    "domain": "youtube.com"
   }
 ]
