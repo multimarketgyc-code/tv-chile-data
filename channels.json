@@ -436,5 +436,13 @@
     "url": "https://www.youtube.com/embed/h7-huTlkU4Y?autoplay=1",
     "category": "infantil",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791505723702",
+    "num": "▶",
+    "name": "Super Toons TV",
+    "url": "https://www.youtube.com/embed/_UcanZG8o3g?autoplay=1",
+    "category": "infantil",
+    "domain": "youtube.com"
   }
 ]
