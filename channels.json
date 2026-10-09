@@ -9,15 +9,6 @@
     "domain": "vix.com"
   },
   {
-    "id": "mercadoplay",
-    "num": "•",
-    "name": "Mercado Play",
-    "url": "https://play.mercadolibre.cl/",
-    "category": "peliculas",
-    "direct": true,
-    "domain": "mercadolibre.cl"
-  },
-  {
     "id": "pluto",
     "num": "•",
     "name": "Pluto TV",
