@@ -480,5 +480,13 @@
     "url": "https://www.youtube.com/embed/7XUQgnvJLfA?autoplay=1",
     "category": "entretenimiento",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791557307171",
+    "num": "▶",
+    "name": "Nat Geo en Español",
+    "url": "https://www.youtube.com/embed/EYDd5U7fQXQ?autoplay=1",
+    "category": "documentales",
+    "domain": "youtube.com"
   }
 ]
