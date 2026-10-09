@@ -461,5 +461,14 @@
     "category": "peliculas",
     "direct": true,
     "domain": "edge.essastream.com"
+  },
+  {
+    "id": "custom_1791509730712",
+    "num": "•",
+    "name": "AMC En Espanõl En Vivo",
+    "url": "https://amc-amcespanol-1-us.plex.wurl.tv/4300.m3u8",
+    "category": "peliculas",
+    "direct": true,
+    "domain": "amc-amcespanol-1-us.plex.wurl.tv"
   }
 ]
