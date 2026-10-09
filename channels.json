@@ -187,14 +187,6 @@
     "domain": "youtube.com"
   },
   {
-    "id": "spongebob",
-    "num": "▶",
-    "name": "SpongeBob 60 min (Nicktoons, oficial)",
-    "url": "https://www.youtube.com/embed/KduWmY-cFSA?autoplay=1",
-    "category": "infantil",
-    "domain": "youtube.com"
-  },
-  {
     "id": "kidsvid2",
     "num": "▶",
     "name": "Video infantil 2",
