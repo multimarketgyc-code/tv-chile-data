@@ -281,14 +281,6 @@
     "domain": "youtube.com"
   },
   {
-    "id": "yt_aljazeera",
-    "num": "●",
-    "name": "Al Jazeera English, en inglés (en vivo aquí)",
-    "url": "https://www.youtube.com/embed/live_stream?channel=UCNye-wNBqNL5ZzHSJj3l8Bg&autoplay=1",
-    "category": "noticias",
-    "domain": "youtube.com"
-  },
-  {
     "id": "custom_1791501890801",
     "num": "▶",
     "name": "Teletrece",
