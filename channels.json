@@ -1,14 +1,5 @@
 [
   {
-    "id": "rakutentv",
-    "num": "•",
-    "name": "Rakuten TV (fuentes contradicen si llega a Chile)",
-    "url": "https://www.rakuten.tv/es/gardens/avod-fast",
-    "category": "peliculas",
-    "direct": true,
-    "domain": "rakuten.tv"
-  },
-  {
     "id": "cinetel",
     "num": "•",
     "name": "Cinetel (cine en español, catálogo)",
