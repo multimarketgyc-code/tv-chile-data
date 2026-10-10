@@ -281,14 +281,6 @@
     "domain": "youtube.com"
   },
   {
-    "id": "yt_caracol",
-    "num": "●",
-    "name": "Noticias Caracol, Colombia (en vivo aquí)",
-    "url": "https://www.youtube.com/embed/live_stream?channel=UC2Xq2PK-got3Rtz9ZJ32hLQ&autoplay=1",
-    "category": "noticias",
-    "domain": "youtube.com"
-  },
-  {
     "id": "yt_aljazeera",
     "num": "●",
     "name": "Al Jazeera English, en inglés (en vivo aquí)",
