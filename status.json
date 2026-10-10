@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-10T02:16:46Z",
+  "checkedAt": "2026-10-10T15:24:17Z",
   "channels": {
     "cinetel": {
       "state": "ok",
@@ -84,10 +84,10 @@
       "detail": "HTTP 200"
     },
     "primevideo": {
-      "state": "ok",
+      "state": "unknown",
       "url": "https://www.primevideo.com",
       "fails": 0,
-      "detail": "HTTP 200"
+      "detail": "HTTP 503"
     },
     "paramount": {
       "state": "unknown",
