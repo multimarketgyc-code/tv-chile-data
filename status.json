@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-10T01:54:01Z",
+  "checkedAt": "2026-10-10T02:10:40Z",
   "channels": {
     "cinetel": {
       "state": "ok",
@@ -28,7 +28,8 @@
     "france24": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCUdOoVWuWmgo1wByzcsyKDQ&autoplay=1",
-      "fails": 0
+      "fails": 0,
+      "detail": "senales ambiguas de transmision"
     },
     "natgeoes": {
       "state": "ok",
@@ -55,16 +56,14 @@
       "detail": "HTTP 200"
     },
     "kidsvid2": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/yXzF6FcdGqE?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "kidsvid3": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/gGU5tpavDVQ?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "laciudadfm": {
       "state": "ok",
@@ -73,10 +72,10 @@
       "detail": "HTTP 200"
     },
     "netflix": {
-      "state": "ok",
+      "state": "unknown",
       "url": "https://www.netflix.com/login",
       "fails": 0,
-      "detail": "HTTP 200"
+      "detail": "error interno: IncompleteRead"
     },
     "hbomax": {
       "state": "ok",
@@ -91,11 +90,10 @@
       "detail": "HTTP 200"
     },
     "primevideo": {
-      "state": "down",
+      "state": "ok",
       "url": "https://www.primevideo.com",
-      "since": "2026-10-10",
-      "fails": 1,
-      "detail": "HTTP 503"
+      "fails": 0,
+      "detail": "HTTP 200"
     },
     "paramount": {
       "state": "unknown",
@@ -124,95 +122,85 @@
     "yt_meganoticias": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCkccyEbqhhM3uKOI6Shm-4Q&autoplay=1",
-      "fails": 0
+      "fails": 0,
+      "detail": "senales ambiguas de transmision"
     },
     "yt_dwespanol": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCT4Jg8h03dD0iN3Pb5L0PMA&autoplay=1",
-      "fails": 0
+      "fails": 0,
+      "detail": "senales ambiguas de transmision"
     },
     "yt_tn": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCj6PcyLvpnIRT_2W_mwa9Aw&autoplay=1",
-      "fails": 0
+      "fails": 0,
+      "detail": "senales ambiguas de transmision"
     },
     "custom_1791501890801": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/oy1dvCRd42s?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791502114677": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/8LZkRQhb69Y?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791502171602": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/LX_UGZU7suw?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791502203005": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/Fgdw807FSl8?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791503157299": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/Rege-CYcPJ0?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791503319037": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/v4E0JxdziJM?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791503489412": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/WRJK27H3Zi0?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791504712408": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/XeU2hwj6-QM?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791504745969": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/oxX_new26jw?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791505512449": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/4c96KRQLKrM?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791505616116": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/h7-huTlkU4Y?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791505723702": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/_UcanZG8o3g?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791505767441": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/1e5d4mBbBxU?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791508178851": {
       "state": "ok",
@@ -262,38 +250,32 @@
     "custom_1791556843892": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/7XUQgnvJLfA?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791557307171": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/EYDd5U7fQXQ?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791560605489": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/-D9F0zr-ieA?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791560790231": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/OS94xU5WhrQ?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791561161264": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/Thtj8Ht7Z_c?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791561276741": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/qJi_J_xg-Ro?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791562703325": {
       "state": "unknown",
@@ -304,26 +286,35 @@
     "custom_1791562910908": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/uhy_aOcO4xo?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791591542284": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/6zPN2HK3zqc?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791591592766": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/7XUQgnvJLfA?autoplay=1",
-      "fails": 0,
-      "detail": "YouTube respondio 429"
+      "fails": 0
     },
     "custom_1791591918534": {
       "state": "offline",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCECJDeK0MNapZbpaOzxrUPA&autoplay=1",
       "since": "2026-10-10",
       "fails": 1
+    },
+    "custom_1791597235993": {
+      "state": "ok",
+      "url": "https://videostream.shockmedia.com.ar:19360/neotvdigital/neotvdigital.m3u8",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "custom_1791597344266": {
+      "state": "ok",
+      "url": "https://playerv.zcast.com.br/video/gentv/6/true/false/WXpOS01rMTVOVFpaTWtaNlpFTTFhbUl5TUhWWmJrazkrMw==/16:9/nocover/nao/",
+      "fails": 0,
+      "detail": "HTTP 200"
     }
   }
 }
