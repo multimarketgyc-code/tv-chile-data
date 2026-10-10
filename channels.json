@@ -473,5 +473,14 @@
     "category": "peliculas",
     "direct": true,
     "domain": "playerv.zcast.com.br"
+  },
+  {
+    "id": "custom_1791597472305",
+    "num": "•",
+    "name": "UCV TV",
+    "url": "https://rudo.video/live/ucvtv2",
+    "category": "nacionales",
+    "direct": true,
+    "domain": "rudo.video"
   }
 ]
