@@ -184,14 +184,6 @@
     "domain": "youtube.com"
   },
   {
-    "id": "yt_tn",
-    "num": "●",
-    "name": "TN Todo Noticias, Argentina (en vivo aquí)",
-    "url": "https://www.youtube.com/embed/live_stream?channel=UCj6PcyLvpnIRT_2W_mwa9Aw&autoplay=1",
-    "category": "noticias",
-    "domain": "youtube.com"
-  },
-  {
     "id": "custom_1791501890801",
     "num": "▶",
     "name": "Teletrece",
