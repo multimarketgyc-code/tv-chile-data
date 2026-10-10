@@ -28,5 +28,10 @@
     "id": "270830fc-54d8-4ccf-a0b9-2874be863ee4",
     "label": "Chrome en Android",
     "firstSeen": "2026-10-09T02:13:13.128Z"
+  },
+  {
+    "id": "245b6798-a764-4797-81ad-c9b0d6ea8115",
+    "label": "Chrome en Dispositivo",
+    "firstSeen": "2026-10-10T11:36:53.376Z"
   }
 ]
