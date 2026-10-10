@@ -12,6 +12,7 @@ Reglas de seguridad:
     solo se marca como problema cuando hay evidencia clara.
   - Solo usa la libreria estandar de Python.
 """
+import http.client
 import json
 import os
 import random
@@ -21,6 +22,7 @@ import ssl
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
@@ -66,42 +68,44 @@ def http_get(url, headers=None):
         raise NetError("other")
     except (socket.timeout, TimeoutError):
         raise NetError("timeout")
-    except (ssl.SSLError, ConnectionError, OSError):
+    except (ssl.SSLError, ConnectionError, OSError, http.client.HTTPException):
         raise NetError("other")
 
 
-def explain_live_page(html):
-    """(estado, razon) segun el HTML de youtube.com/channel/UC.../live.
-
-    ok       -> transmitiendo ahora y YouTube permite integrarlo
-    noembed  -> transmitiendo ahora pero YouTube NO permite integrarlo
-    offline  -> la pagina cargo bien y no hay ninguna transmision en vivo
-    unknown  -> no se puede asegurar (se explica por que en la razon)
+def analyze_live_page(html):
+    """Lee youtube.com/channel/UC.../live. Devuelve:
+       ("live", video_id)  -> hay una transmision en vivo ahora (se confirma con oEmbed)
+       ("offline", "")     -> la pagina del canal cargo bien y no hay transmision
+       ("unknown", razon)  -> no se puede asegurar; la razon incluye las marcas halladas
     """
     if "ytInitialData" not in html and "ytInitialPlayerResponse" not in html:
         return "unknown", "pagina sin datos de YouTube (consentimiento o bloqueo)"
-    if re.search(r'"isLiveNow"\s*:\s*true', html):
-        m = re.search(r'"playableInEmbed"\s*:\s*(true|false)', html)
-        if not m:
-            return "unknown", "en vivo, pero YouTube no informa si se puede integrar"
-        return ("ok" if m.group(1) == "true" else "noembed"), ""
-    if re.search(r'"isLive(Content)?"\s*:\s*true', html):
-        return "unknown", "senales ambiguas de transmision"
-    return "offline", ""
+    canon = re.search(r'<link rel="canonical" href="https://www\.youtube\.com/watch\?v=([\w-]{11})"', html)
+    live_now = bool(re.search(r'"isLiveNow"\s*:\s*true', html) or re.search(r'"isLive"\s*:\s*true', html))
+    if canon and live_now:
+        return "live", canon.group(1)
+    if re.search(r'<link rel="canonical" href="https://www\.youtube\.com/(channel/|@)', html):
+        return "offline", ""
+    marks = "isLiveNow=%d isLive=%d isLiveContent=%d canonical=%s" % (
+        bool(re.search(r'"isLiveNow"\s*:\s*true', html)), bool(re.search(r'"isLive"\s*:\s*true', html)),
+        bool(re.search(r'"isLiveContent"\s*:\s*true', html)), "watch" if canon else "no")
+    return "unknown", "no se pudo ubicar la transmision (%s)" % marks
 
 
-def parse_live_page(html):
-    return explain_live_page(html)[0]
-
-
-def parse_video_page(html):
-    """Estado segun el HTML de youtube.com/watch?v=ID (video individual)."""
-    m = re.search(r'"playableInEmbed"\s*:\s*(true|false)', html)
-    if m:
-        return "ok" if m.group(1) == "true" else "noembed"
-    if re.search(r'"playabilityStatus"\s*:\s*\{\s*"status"\s*:\s*"ERROR"', html):
-        return "offline"        # el video ya no existe
-    return "unknown"
+def oembed_state(video_id, get, sleep):
+    """Pregunta a YouTube (oEmbed) si un video existe y permite integrarse en otra pagina."""
+    url = "https://www.youtube.com/oembed?format=json&url=" + urllib.parse.quote("https://www.youtube.com/watch?v=%s" % video_id, safe="")
+    try:
+        code, _ = yt_get(url, get, sleep)
+    except NetError:
+        return "unknown", "sin respuesta de YouTube (oEmbed)"
+    if code == 200:
+        return "ok", ""
+    if code == 401:
+        return "noembed", ""                      # el dueno desactivo la integracion
+    if code == 404:
+        return "offline", "video no disponible"   # borrado o privado
+    return "unknown", "oEmbed respondio %s" % code
 
 
 def classify_http(code):
@@ -135,16 +139,13 @@ def check_channel(ch, get=http_get, sleep=time.sleep):
             return "unknown", "sin respuesta de YouTube"
         if code != 200:
             return "unknown", "YouTube respondio %s" % code
-        return explain_live_page(html)
+        kind, value = analyze_live_page(html)
+        if kind == "live":
+            return oembed_state(value, get, sleep)
+        return (kind, "") if kind == "offline" else ("unknown", value)
     v = None if direct else VIDEO_RE.search(url)
     if v and v.group(1) != "live_stream":
-        try:
-            code, html = yt_get("https://www.youtube.com/watch?v=%s" % v.group(1), get, sleep)
-        except NetError:
-            return "unknown", "sin respuesta de YouTube"
-        if code != 200:
-            return "unknown", "YouTube respondio %s" % code
-        return parse_video_page(html), ""
+        return oembed_state(v.group(1), get, sleep)
     # Canal que abre en pestana: basta con que el sitio responda
     try:
         code, _ = get(url)
