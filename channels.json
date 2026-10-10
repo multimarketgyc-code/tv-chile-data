@@ -430,5 +430,13 @@
     "category": "nacionales",
     "direct": true,
     "domain": "rudo.video"
+  },
+  {
+    "id": "custom_1791648339262",
+    "num": "▶",
+    "name": "CHV Noticias",
+    "url": "https://www.youtube.com/embed/k7TcDT3uxXw?autoplay=1",
+    "category": "nacionales",
+    "domain": "youtube.com"
   }
 ]
