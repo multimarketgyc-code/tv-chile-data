@@ -19,11 +19,19 @@ LIVE_NOW_FLAG = '<link rel="canonical" href="https://www.youtube.com/watch?v=%s"
 ENDED_STREAM = '<link rel="canonical" href="https://www.youtube.com/watch?v=%s">' % VID + DATA + '<script>{"videoDetails":{"isLiveContent":true}}</script>'
 CHANNEL_PAGE = '<link rel="canonical" href="https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv">' + DATA
 HANDLE_PAGE = '<link rel="canonical" href="https://www.youtube.com/@alguien">' + DATA
+# Variantes reales: la pagina que ve un servidor puede no traer el enlace canonical
+NO_CANON_LIVE = DATA + '<script>{"videoDetails":{"videoId":"%s","title":"EN VIVO","isLive":true,"isLiveContent":true}}</script>' % VID
+CANON_REVERSED = '<link href="https://www.youtube.com/watch?v=%s" rel="canonical">' % VID + DATA + '<script>{"videoDetails":{"isLive":true}}</script>'
+LIVE_NO_ID = DATA + '<script>{"videoDetails":{"isLive":true}}</script>'
 CONSENT = '<html><body><form action="https://consent.youtube.com/save">Antes de ir a YouTube</form></body></html>'
 
 ok(cc.analyze_live_page(LIVE_PAGE) == ("live", VID), "transmitiendo ahora (isLive) -> 'live' con el id del video")
 ok(cc.analyze_live_page(LIVE_NOW_FLAG) == ("live", VID), "transmitiendo ahora (isLiveNow) -> 'live'")
 ok(cc.analyze_live_page(CHANNEL_PAGE) == ("offline", "") and cc.analyze_live_page(HANDLE_PAGE) == ("offline", ""), "pagina del canal sin transmision -> offline")
+ok(cc.analyze_live_page(NO_CANON_LIVE) == ("live", VID), "sin canonical pero con videoDetails.videoId e isLive -> 'live' (lo que ve GitHub)")
+ok(cc.analyze_live_page(CANON_REVERSED) == ("live", VID), "canonical con los atributos en otro orden -> 'live'")
+k, why = cc.analyze_live_page(LIVE_NO_ID)
+ok(k == "unknown" and "videoDetails=0" in why and "isLive=1" in why, "en vivo pero sin poder ubicar el video -> unknown con marcas: %s" % why)
 k, why = cc.analyze_live_page(ENDED_STREAM)
 ok(k == "unknown" and "isLiveContent=1" in why and "canonical=watch" in why, "una transmision que ya termino NO se da por 'en vivo' y explica las marcas: %s" % why)
 k, why = cc.analyze_live_page(CONSENT)

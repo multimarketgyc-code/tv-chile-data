@@ -80,15 +80,18 @@ def analyze_live_page(html):
     """
     if "ytInitialData" not in html and "ytInitialPlayerResponse" not in html:
         return "unknown", "pagina sin datos de YouTube (consentimiento o bloqueo)"
-    canon = re.search(r'<link rel="canonical" href="https://www\.youtube\.com/watch\?v=([\w-]{11})"', html)
+    canon = (re.search(r'<link[^>]+rel="canonical"[^>]+href="https://www\.youtube\.com/watch\?v=([\w-]{11})', html)
+             or re.search(r'<link[^>]+href="https://www\.youtube\.com/watch\?v=([\w-]{11})"[^>]+rel="canonical"', html))
+    details = re.search(r'"videoDetails"\s*:\s*\{\s*"videoId"\s*:\s*"([\w-]{11})"', html)
     live_now = bool(re.search(r'"isLiveNow"\s*:\s*true', html) or re.search(r'"isLive"\s*:\s*true', html))
-    if canon and live_now:
-        return "live", canon.group(1)
-    if re.search(r'<link rel="canonical" href="https://www\.youtube\.com/(channel/|@)', html):
+    video_id = (canon or details).group(1) if (canon or details) else None
+    if video_id and live_now:
+        return "live", video_id
+    if re.search(r'<link[^>]+rel="canonical"[^>]+href="https://www\.youtube\.com/(channel/|@)', html):
         return "offline", ""
-    marks = "isLiveNow=%d isLive=%d isLiveContent=%d canonical=%s" % (
+    marks = "isLiveNow=%d isLive=%d isLiveContent=%d canonical=%s videoDetails=%d" % (
         bool(re.search(r'"isLiveNow"\s*:\s*true', html)), bool(re.search(r'"isLive"\s*:\s*true', html)),
-        bool(re.search(r'"isLiveContent"\s*:\s*true', html)), "watch" if canon else "no")
+        bool(re.search(r'"isLiveContent"\s*:\s*true', html)), "watch" if canon else "no", bool(details))
     return "unknown", "no se pudo ubicar la transmision (%s)" % marks
 
 
