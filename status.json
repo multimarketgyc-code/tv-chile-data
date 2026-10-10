@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-10T15:24:17Z",
+  "checkedAt": "2026-10-10T16:44:15Z",
   "channels": {
     "cinetel": {
       "state": "ok",
@@ -51,7 +51,7 @@
     },
     "kidsvid2": {
       "state": "ok",
-      "url": "https://www.youtube.com/embed/yXzF6FcdGqE?autoplay=1",
+      "url": "https://www.youtube.com/embed/5XJ3Ey2SGt4?autoplay=1",
       "fails": 0
     },
     "kidsvid3": {
@@ -125,12 +125,6 @@
       "fails": 0,
       "detail": "no se pudo ubicar la transmision (isLiveNow=0 isLive=1 isLiveContent=0 canonical=no videoDetails=0)"
     },
-    "yt_tn": {
-      "state": "unknown",
-      "url": "https://www.youtube.com/embed/live_stream?channel=UCj6PcyLvpnIRT_2W_mwa9Aw&autoplay=1",
-      "fails": 0,
-      "detail": "no se pudo ubicar la transmision (isLiveNow=0 isLive=1 isLiveContent=0 canonical=no videoDetails=0)"
-    },
     "custom_1791501890801": {
       "state": "ok",
       "url": "https://www.youtube.com/embed/oy1dvCRd42s?autoplay=1",
@@ -139,16 +133,6 @@
     "custom_1791502114677": {
       "state": "ok",
       "url": "https://www.youtube.com/embed/8LZkRQhb69Y?autoplay=1",
-      "fails": 0
-    },
-    "custom_1791502171602": {
-      "state": "ok",
-      "url": "https://www.youtube.com/embed/LX_UGZU7suw?autoplay=1",
-      "fails": 0
-    },
-    "custom_1791502203005": {
-      "state": "ok",
-      "url": "https://www.youtube.com/embed/Fgdw807FSl8?autoplay=1",
       "fails": 0
     },
     "custom_1791503157299": {
@@ -294,6 +278,11 @@
       "url": "https://rudo.video/live/ucvtv2",
       "fails": 0,
       "detail": "HTTP 200"
+    },
+    "custom_1791648339262": {
+      "state": "ok",
+      "url": "https://www.youtube.com/embed/k7TcDT3uxXw?autoplay=1",
+      "fails": 0
     }
   }
 }
