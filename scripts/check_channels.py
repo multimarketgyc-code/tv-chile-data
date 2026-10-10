@@ -14,10 +14,12 @@ Reglas de seguridad:
 """
 import json
 import os
+import random
 import re
 import socket
 import ssl
 import sys
+import time
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
@@ -29,6 +31,8 @@ TIMEOUT = 20
 HEARTBEAT = timedelta(days=3)       # aunque nada cambie, se actualiza la fecha cada 3 dias
 BAD = ("offline", "down", "noembed")
 YT_HEADERS = {"Cookie": "CONSENT=YES+cb.20240101-00-p0.es+FX+000; SOCS=CAI"}
+YT_DELAY = 2.0                      # pausa entre pedidos a YouTube (si no, responde 429)
+YT_RETRIES = 3                      # intentos cuando YouTube responde 429
 
 LIVE_RE = re.compile(r"youtube\.com/embed/live_stream\?channel=(UC[\w-]{10,})")
 VIDEO_RE = re.compile(r"youtube\.com/embed/([\w-]{6,})")
@@ -64,24 +68,28 @@ def http_get(url, headers=None):
         raise NetError("other")
 
 
-def parse_live_page(html):
-    """Estado segun el HTML de youtube.com/channel/UC.../live.
+def explain_live_page(html):
+    """(estado, razon) segun el HTML de youtube.com/channel/UC.../live.
 
     ok       -> transmitiendo ahora y YouTube permite integrarlo
     noembed  -> transmitiendo ahora pero YouTube NO permite integrarlo
     offline  -> la pagina cargo bien y no hay ninguna transmision en vivo
-    unknown  -> no se puede asegurar (pagina de consentimiento, cambio de formato, etc.)
+    unknown  -> no se puede asegurar (se explica por que en la razon)
     """
     if "ytInitialData" not in html and "ytInitialPlayerResponse" not in html:
-        return "unknown"
+        return "unknown", "pagina sin datos de YouTube (consentimiento o bloqueo)"
     if re.search(r'"isLiveNow"\s*:\s*true', html):
         m = re.search(r'"playableInEmbed"\s*:\s*(true|false)', html)
         if not m:
-            return "unknown"
-        return "ok" if m.group(1) == "true" else "noembed"
+            return "unknown", "en vivo, pero YouTube no informa si se puede integrar"
+        return ("ok" if m.group(1) == "true" else "noembed"), ""
     if re.search(r'"isLive(Content)?"\s*:\s*true', html):
-        return "unknown"        # senales ambiguas: mejor no afirmar nada
-    return "offline"
+        return "unknown", "senales ambiguas de transmision"
+    return "offline", ""
+
+
+def parse_live_page(html):
+    return explain_live_page(html)[0]
 
 
 def parse_video_page(html):
@@ -97,28 +105,39 @@ def parse_video_page(html):
 def classify_http(code):
     if 200 <= code < 400:
         return "ok"
-    if code in (404, 410) or 500 <= code < 600:
+    if code in (404, 410):
         return "down"
-    return "unknown"           # 401/403/429...: muchos sitios bloquean a los robots
+    return "unknown"           # 403/429/5xx...: muchos sitios (ej. Amazon) rechazan a los robots
 
 
-def check_channel(ch, get=http_get):
+def yt_get(url, get, sleep):
+    """Pide una pagina de YouTube; si responde 429 espera y reintenta."""
+    code, html = get(url, YT_HEADERS)
+    for attempt in range(1, YT_RETRIES):
+        if code != 429:
+            break
+        sleep(15 * attempt)
+        code, html = get(url, YT_HEADERS)
+    return code, html
+
+
+def check_channel(ch, get=http_get, sleep=time.sleep):
     """Devuelve (estado, detalle) para un canal."""
     url = ch.get("url", "")
     direct = bool(ch.get("direct"))
     m = None if direct else LIVE_RE.search(url)
     if m:
         try:
-            code, html = get("https://www.youtube.com/channel/%s/live" % m.group(1), YT_HEADERS)
+            code, html = yt_get("https://www.youtube.com/channel/%s/live" % m.group(1), get, sleep)
         except NetError:
             return "unknown", "sin respuesta de YouTube"
         if code != 200:
             return "unknown", "YouTube respondio %s" % code
-        return parse_live_page(html), ""
+        return explain_live_page(html)
     v = None if direct else VIDEO_RE.search(url)
     if v and v.group(1) != "live_stream":
         try:
-            code, html = get("https://www.youtube.com/watch?v=%s" % v.group(1), YT_HEADERS)
+            code, html = yt_get("https://www.youtube.com/watch?v=%s" % v.group(1), get, sleep)
         except NetError:
             return "unknown", "sin respuesta de YouTube"
         if code != 200:
@@ -189,7 +208,15 @@ def should_write(new_channels, old, now):
     return now - last >= HEARTBEAT
 
 
-def main(root=".", get=http_get, now=None):
+def uses_youtube_page(ch):
+    if ch.get("direct"):
+        return False
+    url = ch.get("url", "")
+    v = VIDEO_RE.search(url)
+    return bool(LIVE_RE.search(url) or (v and v.group(1) != "live_stream"))
+
+
+def main(root=".", get=http_get, now=None, sleep=time.sleep):
     now = now or datetime.now(timezone.utc)
     with open(os.path.join(root, "channels.json"), encoding="utf-8") as f:
         channels = json.load(f)
@@ -204,13 +231,20 @@ def main(root=".", get=http_get, now=None):
 
     def safe_check(ch):
         try:
-            return check_channel(ch, get)
+            return check_channel(ch, get, sleep)
         except Exception as e:  # un canal con problemas nunca debe frenar la revision de los demas
             return "unknown", "error interno: %s" % type(e).__name__
 
+    results = {}
+    others = [c for c in channels if not uses_youtube_page(c)]
     with ThreadPoolExecutor(max_workers=6) as ex:
-        outcomes = list(ex.map(safe_check, channels))
-    results = {ch["id"]: o for ch, o in zip(channels, outcomes)}
+        for ch, o in zip(others, ex.map(safe_check, others)):
+            results[ch["id"]] = o
+    # YouTube se consulta de a uno y con pausas: desde un servidor, en paralelo responde 429
+    for i, ch in enumerate([c for c in channels if uses_youtube_page(c)]):
+        if i:
+            sleep(YT_DELAY + random.random())
+        results[ch["id"]] = safe_check(ch)
     new_channels = merge(channels, results, old, now)
 
     lines = ["| Canal | Estado | Dias seguidos | Detalle |", "|---|---|---|---|"]

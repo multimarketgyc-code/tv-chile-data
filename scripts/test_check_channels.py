@@ -25,12 +25,13 @@ ok(cc.parse_live_page(LIVE_NO_FLAG) == "unknown", "en vivo pero sin dato de inte
 ok(cc.parse_live_page(NOT_LIVE) == "offline", "pagina bien cargada sin transmision en vivo -> offline")
 ok(cc.parse_live_page(AMBIGUOUS) == "unknown", "senales ambiguas -> unknown")
 ok(cc.parse_live_page(CONSENT) == "unknown", "pantalla de consentimiento -> unknown (nunca 'offline')")
+ok("consentimiento" in cc.explain_live_page(CONSENT)[1] and "integrar" in cc.explain_live_page(LIVE_NO_FLAG)[1] and "ambiguas" in cc.explain_live_page(AMBIGUOUS)[1], "cada 'unknown' trae su razon (para saber por que)")
 ok(cc.parse_live_page("") == "unknown", "pagina vacia -> unknown")
 ok(cc.parse_video_page('{"playableInEmbed":true}') == "ok" and cc.parse_video_page('{"playableInEmbed":false}') == "noembed", "video individual: integrable / no integrable")
 ok(cc.parse_video_page('{"playabilityStatus":{"status":"ERROR","reason":"Video no disponible"}}') == "offline", "video borrado -> offline")
 ok(cc.parse_video_page(CONSENT) == "unknown", "video: consentimiento -> unknown")
 
-for code, want in [(200, "ok"), (301, "ok"), (302, "ok"), (404, "down"), (410, "down"), (500, "down"), (503, "down"), (403, "unknown"), (401, "unknown"), (429, "unknown"), (418, "unknown")]:
+for code, want in [(200, "ok"), (301, "ok"), (302, "ok"), (404, "down"), (410, "down"), (500, "unknown"), (503, "unknown"), (403, "unknown"), (401, "unknown"), (429, "unknown"), (418, "unknown")]:
     ok(cc.classify_http(code) == want, "HTTP %s -> %s" % (code, want))
 
 # ---- check_channel con red simulada ----
@@ -43,21 +44,38 @@ def fake(pages):
         raise NetError("other")
     return get
 YT_LIVE = {"id": "a", "url": "https://www.youtube.com/embed/live_stream?channel=UCabcdefghijklmnopqrstuv&autoplay=1", "domain": "youtube.com"}
-ok(cc.check_channel(YT_LIVE, fake({"/channel/UCabcdefghijklmnopqrstuv/live": (200, LIVE_EMBED)}))[0] == "ok", "canal en vivo integrable")
-ok(cc.check_channel(YT_LIVE, fake({"/live": (200, LIVE_NOEMBED)}))[0] == "noembed", "canal en vivo no integrable")
-ok(cc.check_channel(YT_LIVE, fake({"/live": (200, NOT_LIVE)}))[0] == "offline", "canal sin transmision")
-ok(cc.check_channel(YT_LIVE, fake({"/live": (429, "")}))[0] == "unknown", "YouTube responde 429 -> unknown")
-ok(cc.check_channel(YT_LIVE, fake({"/live": NetError("timeout")}))[0] == "unknown", "sin red hacia YouTube -> unknown")
+ok(cc.check_channel(YT_LIVE, fake({"/channel/UCabcdefghijklmnopqrstuv/live": (200, LIVE_EMBED)}), sleep=lambda s: None)[0] == "ok", "canal en vivo integrable")
+ok(cc.check_channel(YT_LIVE, fake({"/live": (200, LIVE_NOEMBED)}), sleep=lambda s: None)[0] == "noembed", "canal en vivo no integrable")
+ok(cc.check_channel(YT_LIVE, fake({"/live": (200, NOT_LIVE)}), sleep=lambda s: None)[0] == "offline", "canal sin transmision")
+ok(cc.check_channel(YT_LIVE, fake({"/live": (429, "")}), sleep=lambda s: None)[0] == "unknown", "YouTube responde 429 -> unknown")
+ok(cc.check_channel(YT_LIVE, fake({"/live": NetError("timeout")}), sleep=lambda s: None)[0] == "unknown", "sin red hacia YouTube -> unknown")
 YT_VID = {"id": "v", "url": "https://www.youtube.com/embed/3JM61yuIzS4?autoplay=1", "domain": "youtube.com"}
-ok(cc.check_channel(YT_VID, fake({"watch?v=3JM61yuIzS4": (200, '{"playableInEmbed":true}')}))[0] == "ok", "video individual integrable")
+ok(cc.check_channel(YT_VID, fake({"watch?v=3JM61yuIzS4": (200, '{"playableInEmbed":true}')}), sleep=lambda s: None)[0] == "ok", "video individual integrable")
 DIRECT = {"id": "d", "url": "https://www.mega.cl/senal", "direct": True}
-ok(cc.check_channel(DIRECT, fake({"mega.cl": (200, "")}))[0] == "ok", "sitio que abre en pestana y responde -> ok")
-ok(cc.check_channel(DIRECT, fake({"mega.cl": (404, "")}))[0] == "down", "sitio con 404 -> down")
-ok(cc.check_channel(DIRECT, fake({"mega.cl": (403, "")}))[0] == "unknown", "sitio que bloquea robots (403) -> unknown")
-ok(cc.check_channel(DIRECT, fake({"mega.cl": NetError("dns")}))[0] == "down", "dominio que ya no existe -> down")
-ok(cc.check_channel(DIRECT, fake({"mega.cl": NetError("timeout")}))[0] == "unknown", "tiempo agotado -> unknown (no se culpa al canal)")
+ok(cc.check_channel(DIRECT, fake({"mega.cl": (200, "")}), sleep=lambda s: None)[0] == "ok", "sitio que abre en pestana y responde -> ok")
+ok(cc.check_channel(DIRECT, fake({"mega.cl": (404, "")}), sleep=lambda s: None)[0] == "down", "sitio con 404 -> down")
+ok(cc.check_channel(DIRECT, fake({"mega.cl": (403, "")}), sleep=lambda s: None)[0] == "unknown", "sitio que bloquea robots (403) -> unknown")
+ok(cc.check_channel(DIRECT, fake({"mega.cl": NetError("dns")}), sleep=lambda s: None)[0] == "down", "dominio que ya no existe -> down")
+ok(cc.check_channel(DIRECT, fake({"mega.cl": NetError("timeout")}), sleep=lambda s: None)[0] == "unknown", "tiempo agotado -> unknown (no se culpa al canal)")
 YT_AS_TAB = {"id": "t", "url": "https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv/live", "direct": True}
-ok(cc.check_channel(YT_AS_TAB, fake({"youtube.com/channel": (200, "")}))[0] == "ok", "canal de YouTube que abre en pestana: solo se mira que el sitio responda")
+ok(cc.check_channel(YT_AS_TAB, fake({"youtube.com/channel": (200, "")}), sleep=lambda s: None)[0] == "ok", "canal de YouTube que abre en pestana: solo se mira que el sitio responda")
+
+# ---- 429 de YouTube: reintentos con espera ----
+calls = []; sleeps = []
+def flaky(n429):
+    def get(url, headers=None):
+        calls.append(url)
+        return (429, "") if len(calls) <= n429 else (200, LIVE_EMBED)
+    return get
+calls.clear(); sleeps.clear()
+r = cc.check_channel(YT_LIVE, flaky(2), sleep=sleeps.append)
+ok(r[0] == "ok" and len(calls) == 3 and sleeps == [15, 30], "dos 429 y luego 200: reintenta con espera creciente y termina en ok (esperas %s)" % sleeps)
+calls.clear(); sleeps.clear()
+r = cc.check_channel(YT_LIVE, flaky(99), sleep=sleeps.append)
+ok(r == ("unknown", "YouTube respondio 429") and len(calls) == 3, "si siempre responde 429: 3 intentos y queda 'unknown' con su razon")
+calls.clear(); sleeps.clear()
+cc.check_channel(DIRECT, flaky(99), sleep=sleeps.append)
+ok(len(calls) == 1 and not sleeps, "los sitios que no son YouTube no se reintentan ni esperan")
 
 # ---- merge: dias seguidos con problema (por fecha) ----
 D = lambda n, h=6: datetime(2026, 10, 10, h, 0, tzinfo=timezone.utc) + timedelta(days=n)
@@ -102,20 +120,35 @@ with tempfile.TemporaryDirectory() as d:
         if "/live" in url: return 200, LIVE_NOEMBED
         if "mega.cl" in url: return 200, ""
         raise NetError("dns")
-    wrote = cc.main(d, get, now)
+    pauses = []
+    wrote = cc.main(d, get, now, sleep=pauses.append)
     st = json.load(open(os.path.join(d, "status.json")))
     ok(wrote and st["checkedAt"] == "2026-10-10T06:00:00Z", "escribe status.json con la fecha de la revision")
     ok([st["channels"][k]["state"] for k in ("dw", "mega", "roto", "malo")] == ["noembed", "ok", "down", "unknown"], "estados correctos para cada canal: %s" % {k: v["state"] for k, v in st["channels"].items()})
     ok("error interno" in st["channels"]["malo"].get("detail", ""), "un canal que provoca un error no frena la revision de los demas")
     ok(open(os.path.join(d, "channels.json")).read() == before, "channels.json NO se modifica nunca")
-    wrote2 = cc.main(d, get, now + timedelta(days=1))
+    wrote2 = cc.main(d, get, now + timedelta(days=1), sleep=lambda s: None)
     st2 = json.load(open(os.path.join(d, "status.json")))
     ok(wrote2 is True and st2["channels"]["roto"]["fails"] == 2 and st2["channels"]["dw"]["fails"] == 2, "al dia siguiente cuenta 2 dias seguidos (hay cambio en la cuenta, asi que escribe)")
-    wrote3 = cc.main(d, get, now + timedelta(days=1, hours=1))
+    wrote3 = cc.main(d, get, now + timedelta(days=1, hours=1), sleep=lambda s: None)
     ok(wrote3 is False, "misma situacion una hora despues: no vuelve a escribir")
     os.remove(os.path.join(d, "status.json"))
     open(os.path.join(d, "status.json"), "w").write("{esto no es json")
-    ok(cc.main(d, get, now) is True and json.load(open(os.path.join(d, "status.json")))["channels"], "si status.json esta corrupto lo rehace sin romperse")
+    ok(cc.main(d, get, now, sleep=lambda s: None) is True and json.load(open(os.path.join(d, "status.json")))["channels"], "si status.json esta corrupto lo rehace sin romperse")
+
+# ---- pausas entre canales de YouTube ----
+with tempfile.TemporaryDirectory() as d:
+    yts = [{"id": "y%d" % i, "name": "YT%d" % i, "url": "https://www.youtube.com/embed/live_stream?channel=UC%022d&autoplay=1" % i} for i in range(4)]
+    mix = yts + [{"id": "w", "name": "Web", "url": "https://sitio.example/", "direct": True}]
+    json.dump(mix, open(os.path.join(d, "channels.json"), "w"))
+    order = []
+    def get2(url, headers=None):
+        order.append(url); return (200, LIVE_EMBED) if "youtube" in url else (200, "")
+    pauses2 = []
+    cc.main(d, get2, now, sleep=pauses2.append)
+    ok(len(pauses2) == 3 and all(cc.YT_DELAY <= x < cc.YT_DELAY + 1 for x in pauses2), "4 canales de YouTube -> 3 pausas de ~2 s entre ellos: %s" % [round(x, 1) for x in pauses2])
+    yt_calls = [i for i, u in enumerate(order) if "youtube" in u]
+    ok(yt_calls == sorted(yt_calls) and len(yt_calls) == 4, "los pedidos a YouTube salen de a uno")
 
 print("\n" + ("%d FALLARON: %s" % (len(FAILS), FAILS) if FAILS else "TODO OK"))
 raise SystemExit(1 if FAILS else 0)
