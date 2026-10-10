@@ -1,14 +1,5 @@
 [
   {
-    "id": "vix",
-    "num": "•",
-    "name": "ViX (catálogo enorme en español)",
-    "url": "https://vix.com/es-es/ondemand",
-    "category": "peliculas",
-    "direct": true,
-    "domain": "vix.com"
-  },
-  {
     "id": "rakutentv",
     "num": "•",
     "name": "Rakuten TV (fuentes contradicen si llega a Chile)",
