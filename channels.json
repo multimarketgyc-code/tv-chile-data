@@ -115,15 +115,6 @@
     "domain": "youtube.com"
   },
   {
-    "id": "bbcearth",
-    "num": "•",
-    "name": "BBC Earth (naturaleza, oficial)",
-    "url": "https://www.youtube.com/@BBCEarth/videos",
-    "category": "documentales",
-    "direct": true,
-    "domain": "youtube.com"
-  },
-  {
     "id": "plutokids",
     "num": "•",
     "name": "Pluto TV Kids (Forever Kids, El Reino Infantil)",
