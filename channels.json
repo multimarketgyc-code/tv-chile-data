@@ -142,15 +142,6 @@
     "domain": "pluto.tv"
   },
   {
-    "id": "kidoodle",
-    "num": "•",
-    "name": "Kidoodle.TV (50.000+ episodios, sin registro)",
-    "url": "https://watch.kidoodle.tv/",
-    "category": "infantil",
-    "direct": true,
-    "domain": "kidoodle.tv"
-  },
-  {
     "id": "canelakids",
     "num": "•",
     "name": "Canela Kids (puede estar geobloqueado)",
