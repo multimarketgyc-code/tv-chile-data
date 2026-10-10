@@ -44,14 +44,6 @@
     "domain": "youtube.com"
   },
   {
-    "id": "euronews",
-    "num": "●",
-    "name": "Euronews en Español (noticias 24/7 real)",
-    "url": "https://www.youtube.com/embed/live_stream?channel=UCyoGb3SMlTlB8CLGVH4c8Rw&autoplay=1",
-    "category": "noticias",
-    "domain": "youtube.com"
-  },
-  {
     "id": "natgeoes",
     "num": "•",
     "name": "National Geographic España (documentales)",
