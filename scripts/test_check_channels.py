@@ -172,13 +172,14 @@ with tempfile.TemporaryDirectory() as d:
     ok(0 < len(reqs2) < 10 and any("agoto" in v.get("detail", "") for v in st.values()), "tope de tiempo: revisa solo los que alcanza (%d de 10) y explica el resto" % len(reqs2))
 with tempfile.TemporaryDirectory() as d:
     json.dump(yts[:5], open(os.path.join(d, "channels.json"), "w"))
-    seq = [(429, ""), (429, ""), (429, ""), (200, LIVE_EMBED), (200, LIVE_EMBED), (200, LIVE_EMBED)]
     calls3 = []
     def mixed(url, headers=None):
         calls3.append(url); return (429, "") if len(calls3) <= 3 else (200, LIVE_EMBED)
     cc.main(d, mixed, now, sleep=lambda s: None)
     st = json.load(open(os.path.join(d, "status.json")))["channels"]
-    ok([st["y%d" % i]["state"] for i in range(5)] == ["ok"] * 5 or st["y0"]["state"] == "ok", "un bloqueo pasajero (se resuelve en el reintento) no frena a los demas: %s" % [st["y%d" % i]["state"] for i in range(5)])
+    got = [st["y%d" % i]["state"] for i in range(5)]
+    ok(got == ["unknown", "ok", "ok", "ok", "ok"], "un canal bloqueado una vez queda sin dato y los demas siguen normal (no salta el corta-circuitos): %s" % got)
+    ok(len(calls3) == 3 + 4, "y no se hicieron pedidos de mas (%d)" % len(calls3))
 
 print("\n" + ("%d FALLARON: %s" % (len(FAILS), FAILS) if FAILS else "TODO OK"))
 raise SystemExit(1 if FAILS else 0)
