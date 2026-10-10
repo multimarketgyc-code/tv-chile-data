@@ -9,15 +9,6 @@
     "domain": "vix.com"
   },
   {
-    "id": "pluto",
-    "num": "•",
-    "name": "Pluto TV",
-    "url": "https://pluto.tv/",
-    "category": "peliculas",
-    "direct": true,
-    "domain": "pluto.tv"
-  },
-  {
     "id": "plex",
     "num": "•",
     "name": "Plex (TV gratis)",
