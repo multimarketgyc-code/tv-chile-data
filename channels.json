@@ -9,15 +9,6 @@
     "domain": "vix.com"
   },
   {
-    "id": "plex",
-    "num": "•",
-    "name": "Plex (TV gratis)",
-    "url": "https://watch.plex.tv/es",
-    "category": "peliculas",
-    "direct": true,
-    "domain": "plex.tv"
-  },
-  {
     "id": "rakutentv",
     "num": "•",
     "name": "Rakuten TV (fuentes contradicen si llega a Chile)",
