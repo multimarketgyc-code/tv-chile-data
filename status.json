@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-10T02:10:40Z",
+  "checkedAt": "2026-10-10T02:14:45Z",
   "channels": {
     "cinetel": {
       "state": "ok",
@@ -29,7 +29,7 @@
       "state": "unknown",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCUdOoVWuWmgo1wByzcsyKDQ&autoplay=1",
       "fails": 0,
-      "detail": "senales ambiguas de transmision"
+      "detail": "no se pudo ubicar la transmision (isLiveNow=0 isLive=1 isLiveContent=0 canonical=no)"
     },
     "natgeoes": {
       "state": "ok",
@@ -49,19 +49,13 @@
       "fails": 0,
       "detail": "HTTP 200"
     },
-    "cntvinfantil": {
-      "state": "ok",
-      "url": "https://cntvinfantil.cl/",
-      "fails": 0,
-      "detail": "HTTP 200"
-    },
     "kidsvid2": {
       "state": "ok",
       "url": "https://www.youtube.com/embed/yXzF6FcdGqE?autoplay=1",
       "fails": 0
     },
     "kidsvid3": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/gGU5tpavDVQ?autoplay=1",
       "fails": 0
     },
@@ -72,10 +66,10 @@
       "detail": "HTTP 200"
     },
     "netflix": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.netflix.com/login",
       "fails": 0,
-      "detail": "error interno: IncompleteRead"
+      "detail": "HTTP 200"
     },
     "hbomax": {
       "state": "ok",
@@ -123,82 +117,82 @@
       "state": "unknown",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCkccyEbqhhM3uKOI6Shm-4Q&autoplay=1",
       "fails": 0,
-      "detail": "senales ambiguas de transmision"
+      "detail": "no se pudo ubicar la transmision (isLiveNow=0 isLive=1 isLiveContent=0 canonical=no)"
     },
     "yt_dwespanol": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCT4Jg8h03dD0iN3Pb5L0PMA&autoplay=1",
       "fails": 0,
-      "detail": "senales ambiguas de transmision"
+      "detail": "no se pudo ubicar la transmision (isLiveNow=0 isLive=1 isLiveContent=0 canonical=no)"
     },
     "yt_tn": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCj6PcyLvpnIRT_2W_mwa9Aw&autoplay=1",
       "fails": 0,
-      "detail": "senales ambiguas de transmision"
+      "detail": "no se pudo ubicar la transmision (isLiveNow=0 isLive=1 isLiveContent=0 canonical=no)"
     },
     "custom_1791501890801": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/oy1dvCRd42s?autoplay=1",
       "fails": 0
     },
     "custom_1791502114677": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/8LZkRQhb69Y?autoplay=1",
       "fails": 0
     },
     "custom_1791502171602": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/LX_UGZU7suw?autoplay=1",
       "fails": 0
     },
     "custom_1791502203005": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/Fgdw807FSl8?autoplay=1",
       "fails": 0
     },
     "custom_1791503157299": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/Rege-CYcPJ0?autoplay=1",
       "fails": 0
     },
     "custom_1791503319037": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/v4E0JxdziJM?autoplay=1",
       "fails": 0
     },
     "custom_1791503489412": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/WRJK27H3Zi0?autoplay=1",
       "fails": 0
     },
     "custom_1791504712408": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/XeU2hwj6-QM?autoplay=1",
       "fails": 0
     },
     "custom_1791504745969": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/oxX_new26jw?autoplay=1",
       "fails": 0
     },
     "custom_1791505512449": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/4c96KRQLKrM?autoplay=1",
       "fails": 0
     },
     "custom_1791505616116": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/h7-huTlkU4Y?autoplay=1",
       "fails": 0
     },
     "custom_1791505723702": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/_UcanZG8o3g?autoplay=1",
       "fails": 0
     },
     "custom_1791505767441": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/1e5d4mBbBxU?autoplay=1",
       "fails": 0
     },
@@ -226,54 +220,33 @@
       "fails": 0,
       "detail": "HTTP 200"
     },
-    "custom_1791510396168": {
-      "state": "down",
-      "url": "https://dai.google.com/linear/hls/pa/event/GI-9cp_bT8KcerLpZwkuhw/stream/3ffd1cbe-67d8-435b-9203-2950b72845ca:SCL2/master.m3u8",
-      "since": "2026-10-10",
-      "fails": 1,
-      "detail": "HTTP 410"
-    },
-    "custom_1791510520125": {
-      "state": "down",
-      "url": "https://dai.google.com/linear/hls/pa/event/GI-9cp_bT8KcerLpZwkuhw/stream/3ffd1cbe-67d8-435b-9203-2950b72845ca:SCL2/master.m3u8",
-      "since": "2026-10-10",
-      "fails": 1,
-      "detail": "HTTP 410"
-    },
-    "custom_1791510548450": {
-      "state": "down",
-      "url": "https://dai.google.com/linear/hls/pa/event/f4TrySe8SoiGF8Lu3EIq1g/stream/6c6078d2-ea87-4ea2-95df-87178956799f:SCL2/master.m3u8",
-      "since": "2026-10-10",
-      "fails": 1,
-      "detail": "HTTP 410"
-    },
     "custom_1791556843892": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/7XUQgnvJLfA?autoplay=1",
       "fails": 0
     },
     "custom_1791557307171": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/EYDd5U7fQXQ?autoplay=1",
       "fails": 0
     },
     "custom_1791560605489": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/-D9F0zr-ieA?autoplay=1",
       "fails": 0
     },
     "custom_1791560790231": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/OS94xU5WhrQ?autoplay=1",
       "fails": 0
     },
     "custom_1791561161264": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/Thtj8Ht7Z_c?autoplay=1",
       "fails": 0
     },
     "custom_1791561276741": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/qJi_J_xg-Ro?autoplay=1",
       "fails": 0
     },
@@ -284,17 +257,17 @@
       "detail": "HTTP 403"
     },
     "custom_1791562910908": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/uhy_aOcO4xo?autoplay=1",
       "fails": 0
     },
     "custom_1791591542284": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/6zPN2HK3zqc?autoplay=1",
       "fails": 0
     },
     "custom_1791591592766": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/7XUQgnvJLfA?autoplay=1",
       "fails": 0
     },
@@ -313,6 +286,12 @@
     "custom_1791597344266": {
       "state": "ok",
       "url": "https://playerv.zcast.com.br/video/gentv/6/true/false/WXpOS01rMTVOVFpaTWtaNlpFTTFhbUl5TUhWWmJrazkrMw==/16:9/nocover/nao/",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "custom_1791597472305": {
+      "state": "ok",
+      "url": "https://rudo.video/live/ucvtv2",
       "fails": 0,
       "detail": "HTTP 200"
     }
