@@ -88,15 +88,6 @@
     "domain": "youtube.com"
   },
   {
-    "id": "plutokids",
-    "num": "•",
-    "name": "Pluto TV Kids (Forever Kids, El Reino Infantil)",
-    "url": "https://pluto.tv/",
-    "category": "infantil",
-    "direct": true,
-    "domain": "pluto.tv"
-  },
-  {
     "id": "cntvinfantil",
     "num": "•",
     "name": "CNTV Infantil (gobierno de Chile, oficial)",
