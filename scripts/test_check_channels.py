@@ -70,6 +70,15 @@ YT_VID = {"id": "v", "url": "https://www.youtube.com/embed/3JM61yuIzS4?autoplay=
 ok(cc.check_channel(YT_VID, fake({"oembed": (200, "{}")}), NOSLEEP)[0] == "ok", "video fijo que permite integrarse -> ok")
 ok(cc.check_channel(YT_VID, fake({"oembed": (401, "")}), NOSLEEP)[0] == "noembed", "video fijo con integracion desactivada -> noembed")
 ok(cc.check_channel(YT_VID, fake({"oembed": (404, "")}), NOSLEEP) == ("offline", "video no disponible"), "video fijo borrado o privado -> offline 'video no disponible'")
+YT_LIST = {"id": "pl", "url": "https://www.youtube.com/embed/videoseries?list=PLabcdefghijkl&autoplay=1", "domain": "youtube.com"}
+asked_l = []
+def spy(url, headers=None):
+    asked_l.append(url); return 200, "{}"
+ok(cc.check_channel(YT_LIST, spy, NOSLEEP)[0] == "ok" and "playlist%3Flist%3DPLabcdefghijkl" in asked_l[0], "lista de reproduccion: se pregunta por la LISTA (no por un video llamado 'videoseries'): %s" % asked_l)
+ok(cc.check_channel(YT_LIST, fake({"oembed": (404, "")}), NOSLEEP)[0] == "offline", "lista borrada o privada -> offline")
+ok(cc.check_channel(YT_LIST, fake({"oembed": (401, "")}), NOSLEEP)[0] == "noembed", "lista con integracion desactivada -> noembed")
+ok(cc.uses_youtube_page(YT_LIST), "las listas se revisan de a uno con pausa, como el resto de YouTube")
+ok(not cc.uses_youtube_page({"url": "https://www.youtube.com/embed/videoseries?x=1", "domain": "youtube.com"}), "y un 'videoseries' sin lista no se confunde con un video")
 DIRECT = {"id": "d", "url": "https://www.mega.cl/senal", "direct": True}
 ok(cc.check_channel(DIRECT, fake({"mega.cl": (200, "")}), NOSLEEP)[0] == "ok", "sitio que abre en pestana y responde -> ok")
 ok(cc.check_channel(DIRECT, fake({"mega.cl": (404, "")}), NOSLEEP)[0] == "down", "sitio con 404 -> down")

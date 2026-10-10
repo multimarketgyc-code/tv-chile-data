@@ -39,6 +39,7 @@ YT_BUDGET = 8 * 60                  # segundos maximos dedicados a YouTube en ca
 YT_MAX_BLOCKED = 3                  # tras 3 canales seguidos bloqueados (429) se deja de insistir
 
 LIVE_RE = re.compile(r"youtube\.com/embed/live_stream\?channel=(UC[\w-]{10,})")
+PLAYLIST_RE = re.compile(r"youtube\.com/embed/videoseries\?list=([\w-]+)")
 VIDEO_RE = re.compile(r"youtube\.com/embed/([\w-]{6,})")
 
 
@@ -97,7 +98,12 @@ def analyze_live_page(html):
 
 def oembed_state(video_id, get, sleep):
     """Pregunta a YouTube (oEmbed) si un video existe y permite integrarse en otra pagina."""
-    url = "https://www.youtube.com/oembed?format=json&url=" + urllib.parse.quote("https://www.youtube.com/watch?v=%s" % video_id, safe="")
+    return oembed_state_url("https://www.youtube.com/watch?v=%s" % video_id, get, sleep)
+
+
+def oembed_state_url(page_url, get, sleep):
+    """Lo mismo para cualquier direccion de YouTube (video o lista de reproduccion)."""
+    url = "https://www.youtube.com/oembed?format=json&url=" + urllib.parse.quote(page_url, safe="")
     try:
         code, _ = yt_get(url, get, sleep)
     except NetError:
@@ -146,8 +152,11 @@ def check_channel(ch, get=http_get, sleep=time.sleep):
         if kind == "live":
             return oembed_state(value, get, sleep)
         return (kind, "") if kind == "offline" else ("unknown", value)
+    pl = None if direct else PLAYLIST_RE.search(url)
+    if pl:
+        return oembed_state_url("https://www.youtube.com/playlist?list=%s" % pl.group(1), get, sleep)
     v = None if direct else VIDEO_RE.search(url)
-    if v and v.group(1) != "live_stream":
+    if v and v.group(1) not in ("live_stream", "videoseries"):
         return oembed_state(v.group(1), get, sleep)
     # Canal que abre en pestana: basta con que el sitio responda
     try:
@@ -219,7 +228,7 @@ def uses_youtube_page(ch):
         return False
     url = ch.get("url", "")
     v = VIDEO_RE.search(url)
-    return bool(LIVE_RE.search(url) or (v and v.group(1) != "live_stream"))
+    return bool(LIVE_RE.search(url) or PLAYLIST_RE.search(url) or (v and v.group(1) not in ("live_stream", "videoseries")))
 
 
 def main(root=".", get=http_get, now=None, sleep=time.sleep, clock=time.monotonic):
