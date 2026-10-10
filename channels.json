@@ -455,5 +455,14 @@
     "url": "https://www.youtube.com/embed/live_stream?channel=UCECJDeK0MNapZbpaOzxrUPA&autoplay=1",
     "category": "entretenimiento",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791597235993",
+    "num": "•",
+    "name": "NEO TV",
+    "url": "https://videostream.shockmedia.com.ar:19360/neotvdigital/neotvdigital.m3u8",
+    "category": "peliculas",
+    "direct": true,
+    "domain": "videostream.shockmedia.com.ar"
   }
 ]
