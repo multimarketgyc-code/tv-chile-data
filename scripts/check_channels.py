@@ -33,6 +33,8 @@ BAD = ("offline", "down", "noembed")
 YT_HEADERS = {"Cookie": "CONSENT=YES+cb.20240101-00-p0.es+FX+000; SOCS=CAI"}
 YT_DELAY = 2.0                      # pausa entre pedidos a YouTube (si no, responde 429)
 YT_RETRIES = 3                      # intentos cuando YouTube responde 429
+YT_BUDGET = 8 * 60                  # segundos maximos dedicados a YouTube en cada revision
+YT_MAX_BLOCKED = 3                  # tras 3 canales seguidos bloqueados (429) se deja de insistir
 
 LIVE_RE = re.compile(r"youtube\.com/embed/live_stream\?channel=(UC[\w-]{10,})")
 VIDEO_RE = re.compile(r"youtube\.com/embed/([\w-]{6,})")
@@ -216,7 +218,7 @@ def uses_youtube_page(ch):
     return bool(LIVE_RE.search(url) or (v and v.group(1) != "live_stream"))
 
 
-def main(root=".", get=http_get, now=None, sleep=time.sleep):
+def main(root=".", get=http_get, now=None, sleep=time.sleep, clock=time.monotonic):
     now = now or datetime.now(timezone.utc)
     with open(os.path.join(root, "channels.json"), encoding="utf-8") as f:
         channels = json.load(f)
@@ -241,10 +243,20 @@ def main(root=".", get=http_get, now=None, sleep=time.sleep):
         for ch, o in zip(others, ex.map(safe_check, others)):
             results[ch["id"]] = o
     # YouTube se consulta de a uno y con pausas: desde un servidor, en paralelo responde 429
+    started = clock()
+    blocked_in_a_row = 0
     for i, ch in enumerate([c for c in channels if uses_youtube_page(c)]):
+        if blocked_in_a_row >= YT_MAX_BLOCKED:
+            results[ch["id"]] = ("unknown", "YouTube limita las consultas desde este servidor; se reintenta en la proxima revision")
+            continue
+        if clock() - started > YT_BUDGET:
+            results[ch["id"]] = ("unknown", "se agoto el tiempo de la revision; se reintenta en la proxima")
+            continue
         if i:
             sleep(YT_DELAY + random.random())
-        results[ch["id"]] = safe_check(ch)
+        outcome = safe_check(ch)
+        results[ch["id"]] = outcome
+        blocked_in_a_row = blocked_in_a_row + 1 if (outcome[0] == "unknown" and "429" in outcome[1]) else 0
     new_channels = merge(channels, results, old, now)
 
     lines = ["| Canal | Estado | Dias seguidos | Detalle |", "|---|---|---|---|"]

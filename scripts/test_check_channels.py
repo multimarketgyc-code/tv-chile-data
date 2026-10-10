@@ -150,5 +150,35 @@ with tempfile.TemporaryDirectory() as d:
     yt_calls = [i for i, u in enumerate(order) if "youtube" in u]
     ok(yt_calls == sorted(yt_calls) and len(yt_calls) == 4, "los pedidos a YouTube salen de a uno")
 
+# ---- corta-circuitos y tope de tiempo ----
+with tempfile.TemporaryDirectory() as d:
+    yts = [{"id": "y%d" % i, "name": "YT%d" % i, "url": "https://www.youtube.com/embed/live_stream?channel=UC%022d&autoplay=1" % i} for i in range(10)]
+    json.dump(yts, open(os.path.join(d, "channels.json"), "w"))
+    reqs = []
+    def blocked(url, headers=None):
+        reqs.append(url); return 429, ""
+    cc.main(d, blocked, now, sleep=lambda s: None)
+    st = json.load(open(os.path.join(d, "status.json")))["channels"]
+    ok(len(reqs) == cc.YT_MAX_BLOCKED * cc.YT_RETRIES, "si YouTube bloquea 3 canales seguidos deja de insistir: %d pedidos en vez de %d" % (len(reqs), 10 * cc.YT_RETRIES))
+    ok(all(v["state"] == "unknown" for v in st.values()) and "limita" in st["y9"]["detail"], "los demas quedan 'unknown' con la razon: %r" % st["y9"]["detail"])
+with tempfile.TemporaryDirectory() as d:
+    json.dump(yts, open(os.path.join(d, "channels.json"), "w"))
+    tick = iter(range(0, 100000, 200))     # el reloj avanza 200 s en cada lectura
+    reqs2 = []
+    def fine(url, headers=None):
+        reqs2.append(url); return 200, LIVE_EMBED
+    cc.main(d, fine, now, sleep=lambda s: None, clock=lambda: next(tick))
+    st = json.load(open(os.path.join(d, "status.json")))["channels"]
+    ok(0 < len(reqs2) < 10 and any("agoto" in v.get("detail", "") for v in st.values()), "tope de tiempo: revisa solo los que alcanza (%d de 10) y explica el resto" % len(reqs2))
+with tempfile.TemporaryDirectory() as d:
+    json.dump(yts[:5], open(os.path.join(d, "channels.json"), "w"))
+    seq = [(429, ""), (429, ""), (429, ""), (200, LIVE_EMBED), (200, LIVE_EMBED), (200, LIVE_EMBED)]
+    calls3 = []
+    def mixed(url, headers=None):
+        calls3.append(url); return (429, "") if len(calls3) <= 3 else (200, LIVE_EMBED)
+    cc.main(d, mixed, now, sleep=lambda s: None)
+    st = json.load(open(os.path.join(d, "status.json")))["channels"]
+    ok([st["y%d" % i]["state"] for i in range(5)] == ["ok"] * 5 or st["y0"]["state"] == "ok", "un bloqueo pasajero (se resuelve en el reintento) no frena a los demas: %s" % [st["y%d" % i]["state"] for i in range(5)])
+
 print("\n" + ("%d FALLARON: %s" % (len(FAILS), FAILS) if FAILS else "TODO OK"))
 raise SystemExit(1 if FAILS else 0)
