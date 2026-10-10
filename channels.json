@@ -482,5 +482,13 @@
     "url": "https://www.youtube.com/embed/7XUQgnvJLfA?autoplay=1",
     "category": "peliculas",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791591918534",
+    "num": "●",
+    "name": "Luisito Comunica",
+    "url": "https://www.youtube.com/embed/live_stream?channel=UCECJDeK0MNapZbpaOzxrUPA&autoplay=1",
+    "category": "entretenimiento",
+    "domain": "youtube.com"
   }
 ]
