@@ -1,0 +1,329 @@
+{
+  "checkedAt": "2026-10-10T01:54:01Z",
+  "channels": {
+    "cinetel": {
+      "state": "ok",
+      "url": "https://www.youtube.com/channel/UCRAFplJ4UGiN86otx8BS7EA/videos",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "swenfilms": {
+      "state": "ok",
+      "url": "https://www.youtube.com/@SwenFilms/videos",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "filmisnowplus": {
+      "state": "ok",
+      "url": "https://www.youtube.com/@FilmIsNowMoviesPlus/videos",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "mrbeast": {
+      "state": "ok",
+      "url": "https://www.youtube.com/@MrBeast/videos",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "france24": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/live_stream?channel=UCUdOoVWuWmgo1wByzcsyKDQ&autoplay=1",
+      "fails": 0
+    },
+    "natgeoes": {
+      "state": "ok",
+      "url": "https://www.youtube.com/channel/UCpyYUq9kcBMLPlfE8EzguvA/videos",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "natgeolat": {
+      "state": "ok",
+      "url": "https://www.youtube.com/channel/UCnmlG_YzRYzWzJbW2oDn_ow/videos",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "dwdoc": {
+      "state": "ok",
+      "url": "https://www.youtube.com/dwdocumental",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "cntvinfantil": {
+      "state": "ok",
+      "url": "https://cntvinfantil.cl/",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "kidsvid2": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/yXzF6FcdGqE?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "kidsvid3": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/gGU5tpavDVQ?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "laciudadfm": {
+      "state": "ok",
+      "url": "https://laciudadfm.cl/",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "netflix": {
+      "state": "ok",
+      "url": "https://www.netflix.com/login",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "hbomax": {
+      "state": "ok",
+      "url": "https://www.hbomax.com/sign-in",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "disneyplus": {
+      "state": "ok",
+      "url": "https://www.disneyplus.com/login",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "primevideo": {
+      "state": "down",
+      "url": "https://www.primevideo.com",
+      "since": "2026-10-10",
+      "fails": 1,
+      "detail": "HTTP 503"
+    },
+    "paramount": {
+      "state": "unknown",
+      "url": "https://www.paramountplus.com/account/signin/",
+      "fails": 0,
+      "detail": "HTTP 403"
+    },
+    "custom_1791422009756": {
+      "state": "ok",
+      "url": "https://rudo.video/live/t13?volume=0&mute=1&autost%E2%80%A6vbmxpbmVhciZzej00MDB4NjAmbWkiLCJ0aW1lIjpbNjBdfX0=%27",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "custom_1791422057703": {
+      "state": "ok",
+      "url": "https://rudo.video/live/mega?unmute=1",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "custom_1791422273354": {
+      "state": "ok",
+      "url": "https://rudo.video/live/tvmas",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "yt_meganoticias": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/live_stream?channel=UCkccyEbqhhM3uKOI6Shm-4Q&autoplay=1",
+      "fails": 0
+    },
+    "yt_dwespanol": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/live_stream?channel=UCT4Jg8h03dD0iN3Pb5L0PMA&autoplay=1",
+      "fails": 0
+    },
+    "yt_tn": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/live_stream?channel=UCj6PcyLvpnIRT_2W_mwa9Aw&autoplay=1",
+      "fails": 0
+    },
+    "custom_1791501890801": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/oy1dvCRd42s?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791502114677": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/8LZkRQhb69Y?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791502171602": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/LX_UGZU7suw?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791502203005": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/Fgdw807FSl8?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791503157299": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/Rege-CYcPJ0?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791503319037": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/v4E0JxdziJM?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791503489412": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/WRJK27H3Zi0?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791504712408": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/XeU2hwj6-QM?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791504745969": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/oxX_new26jw?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791505512449": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/4c96KRQLKrM?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791505616116": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/h7-huTlkU4Y?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791505723702": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/_UcanZG8o3g?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791505767441": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/1e5d4mBbBxU?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791508178851": {
+      "state": "ok",
+      "url": "https://unlimited2-cl-isp.dps.live/atv/atv.smil/playlist.m3u8",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "custom_1791509352425": {
+      "state": "ok",
+      "url": "https://edge.essastream.com/megacinetv/tracks-v1a1/mono.m3u8",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "custom_1791509730712": {
+      "state": "ok",
+      "url": "https://amc-amcespanol-1-us.plex.wurl.tv/4300.m3u8",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "custom_1791509889044": {
+      "state": "ok",
+      "url": "https://vtm1.msinteractiva.com/teleclasica/teleclasica/playlist.m3u8",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "custom_1791510396168": {
+      "state": "down",
+      "url": "https://dai.google.com/linear/hls/pa/event/GI-9cp_bT8KcerLpZwkuhw/stream/3ffd1cbe-67d8-435b-9203-2950b72845ca:SCL2/master.m3u8",
+      "since": "2026-10-10",
+      "fails": 1,
+      "detail": "HTTP 410"
+    },
+    "custom_1791510520125": {
+      "state": "down",
+      "url": "https://dai.google.com/linear/hls/pa/event/GI-9cp_bT8KcerLpZwkuhw/stream/3ffd1cbe-67d8-435b-9203-2950b72845ca:SCL2/master.m3u8",
+      "since": "2026-10-10",
+      "fails": 1,
+      "detail": "HTTP 410"
+    },
+    "custom_1791510548450": {
+      "state": "down",
+      "url": "https://dai.google.com/linear/hls/pa/event/f4TrySe8SoiGF8Lu3EIq1g/stream/6c6078d2-ea87-4ea2-95df-87178956799f:SCL2/master.m3u8",
+      "since": "2026-10-10",
+      "fails": 1,
+      "detail": "HTTP 410"
+    },
+    "custom_1791556843892": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/7XUQgnvJLfA?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791557307171": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/EYDd5U7fQXQ?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791560605489": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/-D9F0zr-ieA?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791560790231": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/OS94xU5WhrQ?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791561161264": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/Thtj8Ht7Z_c?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791561276741": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/qJi_J_xg-Ro?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791562703325": {
+      "state": "unknown",
+      "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
+      "fails": 0,
+      "detail": "HTTP 403"
+    },
+    "custom_1791562910908": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/uhy_aOcO4xo?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791591542284": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/6zPN2HK3zqc?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791591592766": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/7XUQgnvJLfA?autoplay=1",
+      "fails": 0,
+      "detail": "YouTube respondio 429"
+    },
+    "custom_1791591918534": {
+      "state": "offline",
+      "url": "https://www.youtube.com/embed/live_stream?channel=UCECJDeK0MNapZbpaOzxrUPA&autoplay=1",
+      "since": "2026-10-10",
+      "fails": 1
+    }
+  }
+}
