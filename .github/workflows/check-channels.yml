@@ -1,0 +1,43 @@
+name: Revisar canales
+
+on:
+  schedule:
+    - cron: "17 9 * * *"        # todos los dias, ~5-6 AM hora de Chile
+  workflow_dispatch:             # tambien se puede correr a mano desde la pestana Actions
+  push:
+    paths:
+      - "scripts/**"
+      - ".github/workflows/check-channels.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: revisar-canales
+  cancel-in-progress: false
+
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pruebas del revisor
+        run: python3 scripts/test_check_channels.py
+      - name: Revisar canales
+        run: python3 scripts/check_channels.py
+      - name: Guardar resultado
+        run: |
+          git config user.name "revision-automatica"
+          git config user.email "actions@users.noreply.github.com"
+          git add status.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios que guardar"
+          else
+            git commit -m "Revision diaria de canales"
+            git pull --rebase -q
+            git push
+          fi
