@@ -97,15 +97,6 @@
     "domain": "pluto.tv"
   },
   {
-    "id": "canelakids",
-    "num": "•",
-    "name": "Canela Kids (puede estar geobloqueado)",
-    "url": "https://www.canela.tv/kids",
-    "category": "infantil",
-    "direct": true,
-    "domain": "canela.tv"
-  },
-  {
     "id": "cntvinfantil",
     "num": "•",
     "name": "CNTV Infantil (gobierno de Chile, oficial)",
