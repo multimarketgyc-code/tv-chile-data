@@ -71,15 +71,6 @@
     "domain": "youtube.com"
   },
   {
-    "id": "cntvinfantil",
-    "num": "•",
-    "name": "CNTV Infantil (gobierno de Chile, oficial)",
-    "url": "https://cntvinfantil.cl/",
-    "category": "infantil",
-    "direct": true,
-    "domain": "cntvinfantil.cl"
-  },
-  {
     "id": "kidsvid2",
     "num": "▶",
     "name": "Video infantil 2",
