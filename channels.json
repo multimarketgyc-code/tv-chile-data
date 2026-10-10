@@ -464,5 +464,14 @@
     "category": "peliculas",
     "direct": true,
     "domain": "videostream.shockmedia.com.ar"
+  },
+  {
+    "id": "custom_1791597344266",
+    "num": "•",
+    "name": "GEN TV",
+    "url": "https://playerv.zcast.com.br/video/gentv/6/true/false/WXpOS01rMTVOVFpaTWtaNlpFTTFhbUl5TUhWWmJrazkrMw==/16:9/nocover/nao/",
+    "category": "peliculas",
+    "direct": true,
+    "domain": "playerv.zcast.com.br"
   }
 ]
