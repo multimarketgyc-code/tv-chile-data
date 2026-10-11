@@ -421,5 +421,14 @@
     "url": "https://www.youtube.com/embed/TBeng7YwG7U?autoplay=1",
     "category": "entretenimiento",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791683594581",
+    "num": "•",
+    "name": "NEO TV",
+    "url": "https://esenvivo.com.ar/neotvdigital/#/?playlistId=0&videoId=0",
+    "category": "peliculas",
+    "direct": true,
+    "domain": "esenvivo.com.ar"
   }
 ]
