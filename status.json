@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-10T16:44:15Z",
+  "checkedAt": "2026-10-11T15:44:39Z",
   "channels": {
     "cinetel": {
       "state": "ok",
@@ -84,10 +84,10 @@
       "detail": "HTTP 200"
     },
     "primevideo": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.primevideo.com",
       "fails": 0,
-      "detail": "HTTP 503"
+      "detail": "HTTP 200"
     },
     "paramount": {
       "state": "unknown",
@@ -250,22 +250,11 @@
       "url": "https://www.youtube.com/embed/6zPN2HK3zqc?autoplay=1",
       "fails": 0
     },
-    "custom_1791591592766": {
-      "state": "ok",
-      "url": "https://www.youtube.com/embed/7XUQgnvJLfA?autoplay=1",
-      "fails": 0
-    },
     "custom_1791591918534": {
       "state": "offline",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCECJDeK0MNapZbpaOzxrUPA&autoplay=1",
       "since": "2026-10-10",
-      "fails": 1
-    },
-    "custom_1791597235993": {
-      "state": "ok",
-      "url": "https://videostream.shockmedia.com.ar:19360/neotvdigital/neotvdigital.m3u8",
-      "fails": 0,
-      "detail": "HTTP 200"
+      "fails": 2
     },
     "custom_1791597344266": {
       "state": "ok",
@@ -283,6 +272,17 @@
       "state": "ok",
       "url": "https://www.youtube.com/embed/k7TcDT3uxXw?autoplay=1",
       "fails": 0
+    },
+    "custom_1791682341359_0": {
+      "state": "ok",
+      "url": "https://www.youtube.com/embed/TBeng7YwG7U?autoplay=1",
+      "fails": 0
+    },
+    "custom_1791683594581": {
+      "state": "ok",
+      "url": "https://esenvivo.com.ar/neotvdigital/#/?playlistId=0&videoId=0",
+      "fails": 0,
+      "detail": "HTTP 200"
     }
   }
 }
