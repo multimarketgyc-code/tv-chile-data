@@ -389,15 +389,6 @@
     "domain": "youtube.com"
   },
   {
-    "id": "custom_1791597235993",
-    "num": "•",
-    "name": "NEO TV",
-    "url": "https://videostream.shockmedia.com.ar:19360/neotvdigital/neotvdigital.m3u8",
-    "category": "peliculas",
-    "direct": true,
-    "domain": "videostream.shockmedia.com.ar"
-  },
-  {
     "id": "custom_1791597344266",
     "num": "•",
     "name": "GEN TV",
