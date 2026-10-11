@@ -421,10 +421,10 @@
   },
   {
     "id": "custom_1791738329807_0",
-    "num": "●",
-    "name": "Señal en vivo NEO TV”            style=",
+    "num": "8",
+    "name": "NEO TV",
     "url": "https://esenvivo.com.ar/neotvdigital/#/?playlistId=0&videoId=0",
-    "category": "nacionales",
+    "category": "peliculas",
     "domain": "esenvivo.com.ar"
   }
 ]
