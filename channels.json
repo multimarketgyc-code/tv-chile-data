@@ -432,5 +432,13 @@
     "url": "https://www.youtube.com/embed/jHrUCCphZJ4?autoplay=1",
     "category": "peliculas",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791752036900_0",
+    "num": "●",
+    "name": "SEPARADOS | Maratón 24/7 - Capítulos completos | TVN Chile",
+    "url": "https://www.youtube.com/embed/ckIIXQITSH0?autoplay=1",
+    "category": "nacionales",
+    "domain": "youtube.com"
   }
 ]
