@@ -424,5 +424,13 @@
     "url": "https://www.youtube.com/embed/live_stream?channel=UC416zKOTzMTIHxRtUeN6Ciw&autoplay=1",
     "category": "peliculas",
     "domain": "youtube.com"
+  },
+  {
+    "id": "custom_1791751243652_0",
+    "num": "●",
+    "name": "Video de playerv.zcast.com.br",
+    "url": "https://playerv.zcast.com.br/video/gentv/6/true/false/WXpOS01rMTVOVFpaTWtaNlpFTTFhbUl5TUhWWmJrazkrMw==/16:9/nocover/nao/",
+    "category": "peliculas",
+    "domain": "playerv.zcast.com.br"
   }
 ]
