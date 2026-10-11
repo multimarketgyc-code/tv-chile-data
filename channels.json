@@ -421,5 +421,13 @@
     "category": "peliculas",
     "direct": true,
     "domain": "esenvivo.com.ar"
+  },
+  {
+    "id": "custom_1791737105395_0",
+    "num": "●",
+    "name": "Señal en vivo Mega",
+    "url": "https://rudo.video/live/mega?unmute=1",
+    "category": "nacionales",
+    "domain": "rudo.video"
   }
 ]
