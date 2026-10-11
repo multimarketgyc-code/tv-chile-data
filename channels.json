@@ -420,5 +420,13 @@
     "url": "https://rudo.video/live/mega?unmute=1",
     "category": "nacionales",
     "domain": "rudo.video"
+  },
+  {
+    "id": "custom_1791737592158_0",
+    "num": "●",
+    "name": "Señal en vivo TV+”           style=",
+    "url": "https://rudo.video/live/tvmas",
+    "category": "nacionales",
+    "domain": "rudo.video"
   }
 ]
