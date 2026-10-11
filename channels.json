@@ -141,14 +141,6 @@
     "domain": "paramountplus.com"
   },
   {
-    "id": "yt_meganoticias",
-    "num": "●",
-    "name": "Meganoticias 24h (en vivo aquí)",
-    "url": "https://www.youtube.com/embed/live_stream?channel=UCkccyEbqhhM3uKOI6Shm-4Q&autoplay=1",
-    "category": "noticias",
-    "domain": "youtube.com"
-  },
-  {
     "id": "yt_dwespanol",
     "num": "●",
     "name": "DW Español (noticias 24/7, en vivo aquí)",
