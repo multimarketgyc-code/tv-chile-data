@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-11T15:44:39Z",
+  "checkedAt": "2026-10-12T19:05:46Z",
   "channels": {
     "cinetel": {
       "state": "ok",
@@ -95,30 +95,6 @@
       "fails": 0,
       "detail": "HTTP 403"
     },
-    "custom_1791422009756": {
-      "state": "ok",
-      "url": "https://rudo.video/live/t13?volume=0&mute=1&autost%E2%80%A6vbmxpbmVhciZzej00MDB4NjAmbWkiLCJ0aW1lIjpbNjBdfX0=%27",
-      "fails": 0,
-      "detail": "HTTP 200"
-    },
-    "custom_1791422057703": {
-      "state": "ok",
-      "url": "https://rudo.video/live/mega?unmute=1",
-      "fails": 0,
-      "detail": "HTTP 200"
-    },
-    "custom_1791422273354": {
-      "state": "ok",
-      "url": "https://rudo.video/live/tvmas",
-      "fails": 0,
-      "detail": "HTTP 200"
-    },
-    "yt_meganoticias": {
-      "state": "unknown",
-      "url": "https://www.youtube.com/embed/live_stream?channel=UCkccyEbqhhM3uKOI6Shm-4Q&autoplay=1",
-      "fails": 0,
-      "detail": "no se pudo ubicar la transmision (isLiveNow=0 isLive=1 isLiveContent=0 canonical=no videoDetails=0)"
-    },
     "yt_dwespanol": {
       "state": "unknown",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCT4Jg8h03dD0iN3Pb5L0PMA&autoplay=1",
@@ -128,11 +104,6 @@
     "custom_1791501890801": {
       "state": "ok",
       "url": "https://www.youtube.com/embed/oy1dvCRd42s?autoplay=1",
-      "fails": 0
-    },
-    "custom_1791502114677": {
-      "state": "ok",
-      "url": "https://www.youtube.com/embed/8LZkRQhb69Y?autoplay=1",
       "fails": 0
     },
     "custom_1791503157299": {
@@ -183,12 +154,6 @@
     "custom_1791508178851": {
       "state": "ok",
       "url": "https://unlimited2-cl-isp.dps.live/atv/atv.smil/playlist.m3u8",
-      "fails": 0,
-      "detail": "HTTP 200"
-    },
-    "custom_1791509352425": {
-      "state": "ok",
-      "url": "https://edge.essastream.com/megacinetv/tracks-v1a1/mono.m3u8",
       "fails": 0,
       "detail": "HTTP 200"
     },
@@ -254,13 +219,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCECJDeK0MNapZbpaOzxrUPA&autoplay=1",
       "since": "2026-10-10",
-      "fails": 2
-    },
-    "custom_1791597344266": {
-      "state": "ok",
-      "url": "https://playerv.zcast.com.br/video/gentv/6/true/false/WXpOS01rMTVOVFpaTWtaNlpFTTFhbUl5TUhWWmJrazkrMw==/16:9/nocover/nao/",
-      "fails": 0,
-      "detail": "HTTP 200"
+      "fails": 3
     },
     "custom_1791597472305": {
       "state": "ok",
@@ -269,20 +228,85 @@
       "detail": "HTTP 200"
     },
     "custom_1791648339262": {
-      "state": "ok",
+      "state": "offline",
       "url": "https://www.youtube.com/embed/k7TcDT3uxXw?autoplay=1",
-      "fails": 0
+      "since": "2026-10-12",
+      "fails": 1,
+      "detail": "video no disponible"
     },
     "custom_1791682341359_0": {
       "state": "ok",
       "url": "https://www.youtube.com/embed/TBeng7YwG7U?autoplay=1",
       "fails": 0
     },
-    "custom_1791683594581": {
+    "custom_1791737105395_0": {
+      "state": "ok",
+      "url": "https://rudo.video/live/mega?unmute=1",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "custom_1791737592158_0": {
+      "state": "ok",
+      "url": "https://rudo.video/live/tvmas",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "custom_1791737751426_0": {
+      "state": "ok",
+      "url": "https://rudo.video/live/t13?volume=0&mute=1&autost%E2%80%A6vbmxpbmVhciZzej00MDB4NjAmbWkiLCJ0aW1lIjpbNjBdfX0=%27",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "custom_1791738329807_0": {
       "state": "ok",
       "url": "https://esenvivo.com.ar/neotvdigital/#/?playlistId=0&videoId=0",
       "fails": 0,
       "detail": "HTTP 200"
+    },
+    "custom_1791738679303_0": {
+      "state": "ok",
+      "url": "https://edge.essastream.com/megacinetv/tracks-v1a1/mono.m3u8",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "custom_1791751243652_0": {
+      "state": "ok",
+      "url": "https://playerv.zcast.com.br/video/gentv/6/true/false/WXpOS01rMTVOVFpaTWtaNlpFTTFhbUl5TUhWWmJrazkrMw==/16:9/nocover/nao/",
+      "fails": 0,
+      "detail": "HTTP 200"
+    },
+    "custom_1791751845102_0": {
+      "state": "ok",
+      "url": "https://www.youtube.com/embed/jHrUCCphZJ4?autoplay=1",
+      "fails": 0
+    },
+    "custom_1791752036900_0": {
+      "state": "ok",
+      "url": "https://www.youtube.com/embed/ckIIXQITSH0?autoplay=1",
+      "fails": 0
+    },
+    "custom_1791752265675_0": {
+      "state": "offline",
+      "url": "https://www.youtube.com/embed/79cvAfSmWp0?autoplay=1",
+      "since": "2026-10-12",
+      "fails": 1,
+      "detail": "video no disponible"
+    },
+    "custom_1791753635642_0": {
+      "state": "ok",
+      "url": "https://www.youtube.com/embed/h9kamZXC0Vc?autoplay=1",
+      "fails": 0
+    },
+    "custom_1791753667751_0": {
+      "state": "ok",
+      "url": "https://www.youtube.com/embed/QjalS1AMSkU?autoplay=1",
+      "fails": 0
+    },
+    "custom_1791753850515_0": {
+      "state": "unknown",
+      "url": "https://www.youtube.com/embed/QlvCJ66V7gg?autoplay=1",
+      "fails": 0,
+      "detail": "oEmbed respondio 403"
     }
   }
 }
