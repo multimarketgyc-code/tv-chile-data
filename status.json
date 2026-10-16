@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-15T14:11:44Z",
+  "checkedAt": "2026-10-16T13:59:23Z",
   "channels": {
     "cinetel": {
       "state": "ok",
@@ -84,10 +84,10 @@
       "detail": "HTTP 200"
     },
     "primevideo": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.primevideo.com",
       "fails": 0,
-      "detail": "HTTP 503"
+      "detail": "HTTP 200"
     },
     "paramount": {
       "state": "unknown",
@@ -112,10 +112,9 @@
       "fails": 0
     },
     "custom_1791503319037": {
-      "state": "noembed",
+      "state": "ok",
       "url": "https://www.youtube.com/embed/v4E0JxdziJM?autoplay=1",
-      "since": "2026-10-15",
-      "fails": 1
+      "fails": 0
     },
     "custom_1791503489412": {
       "state": "ok",
@@ -220,7 +219,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCECJDeK0MNapZbpaOzxrUPA&autoplay=1",
       "since": "2026-10-10",
-      "fails": 6
+      "fails": 7
     },
     "custom_1791597472305": {
       "state": "ok",
@@ -232,7 +231,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/k7TcDT3uxXw?autoplay=1",
       "since": "2026-10-12",
-      "fails": 4,
+      "fails": 5,
       "detail": "video no disponible"
     },
     "custom_1791682341359_0": {
@@ -290,7 +289,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/79cvAfSmWp0?autoplay=1",
       "since": "2026-10-12",
-      "fails": 4,
+      "fails": 5,
       "detail": "video no disponible"
     },
     "custom_1791753635642_0": {
