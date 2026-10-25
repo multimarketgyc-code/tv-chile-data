@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-24T13:21:44Z",
+  "checkedAt": "2026-10-25T13:44:03Z",
   "channels": {
     "cinetel": {
       "state": "ok",
@@ -96,9 +96,10 @@
       "detail": "HTTP 403"
     },
     "yt_dwespanol": {
-      "state": "ok",
+      "state": "unknown",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCT4Jg8h03dD0iN3Pb5L0PMA&autoplay=1",
-      "fails": 0
+      "fails": 0,
+      "detail": "no se pudo ubicar la transmision (isLiveNow=0 isLive=1 isLiveContent=0 canonical=no videoDetails=0)"
     },
     "custom_1791501890801": {
       "state": "ok",
@@ -219,7 +220,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCECJDeK0MNapZbpaOzxrUPA&autoplay=1",
       "since": "2026-10-10",
-      "fails": 15
+      "fails": 16
     },
     "custom_1791597472305": {
       "state": "ok",
@@ -231,7 +232,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/k7TcDT3uxXw?autoplay=1",
       "since": "2026-10-12",
-      "fails": 13,
+      "fails": 14,
       "detail": "video no disponible"
     },
     "custom_1791682341359_0": {
@@ -289,7 +290,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/79cvAfSmWp0?autoplay=1",
       "since": "2026-10-12",
-      "fails": 13,
+      "fails": 14,
       "detail": "video no disponible"
     },
     "custom_1791753635642_0": {
