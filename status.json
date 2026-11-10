@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-09T19:51:11Z",
+  "checkedAt": "2026-11-10T17:04:39Z",
   "channels": {
     "cinetel": {
       "state": "ok",
@@ -66,10 +66,10 @@
       "detail": "HTTP 200"
     },
     "netflix": {
-      "state": "ok",
+      "state": "unknown",
       "url": "https://www.netflix.com/login",
       "fails": 0,
-      "detail": "HTTP 200"
+      "detail": "sin respuesta (other)"
     },
     "hbomax": {
       "state": "ok",
@@ -223,7 +223,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCECJDeK0MNapZbpaOzxrUPA&autoplay=1",
       "since": "2026-10-10",
-      "fails": 31
+      "fails": 32
     },
     "custom_1791597472305": {
       "state": "ok",
@@ -235,7 +235,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/k7TcDT3uxXw?autoplay=1",
       "since": "2026-10-12",
-      "fails": 29,
+      "fails": 30,
       "detail": "video no disponible"
     },
     "custom_1791682341359_0": {
@@ -293,7 +293,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/79cvAfSmWp0?autoplay=1",
       "since": "2026-10-12",
-      "fails": 29,
+      "fails": 30,
       "detail": "video no disponible"
     },
     "custom_1791753635642_0": {
