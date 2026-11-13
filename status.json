@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-12T17:37:03Z",
+  "checkedAt": "2026-11-13T17:14:30Z",
   "channels": {
     "cinetel": {
       "state": "ok",
@@ -66,10 +66,10 @@
       "detail": "HTTP 200"
     },
     "netflix": {
-      "state": "unknown",
+      "state": "ok",
       "url": "https://www.netflix.com/login",
       "fails": 0,
-      "detail": "sin respuesta (other)"
+      "detail": "HTTP 200"
     },
     "hbomax": {
       "state": "ok",
@@ -168,11 +168,10 @@
       "detail": "HTTP 200"
     },
     "custom_1791509889044": {
-      "state": "down",
+      "state": "ok",
       "url": "https://vtm1.msinteractiva.com/teleclasica/teleclasica/playlist.m3u8",
-      "since": "2026-11-12",
-      "fails": 1,
-      "detail": "HTTP 404"
+      "fails": 0,
+      "detail": "HTTP 200"
     },
     "custom_1791556843892": {
       "state": "ok",
@@ -224,7 +223,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCECJDeK0MNapZbpaOzxrUPA&autoplay=1",
       "since": "2026-10-10",
-      "fails": 34
+      "fails": 35
     },
     "custom_1791597472305": {
       "state": "ok",
@@ -236,14 +235,14 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/k7TcDT3uxXw?autoplay=1",
       "since": "2026-10-12",
-      "fails": 32,
+      "fails": 33,
       "detail": "video no disponible"
     },
     "custom_1791682341359_0": {
       "state": "offline",
       "url": "https://www.youtube.com/embed/TBeng7YwG7U?autoplay=1",
       "since": "2026-11-12",
-      "fails": 1,
+      "fails": 2,
       "detail": "video no disponible"
     },
     "custom_1791737105395_0": {
@@ -271,10 +270,10 @@
       "detail": "HTTP 200"
     },
     "custom_1791738679303_0": {
-      "state": "ok",
+      "state": "unknown",
       "url": "https://edge.essastream.com/megacinetv/tracks-v1a1/mono.m3u8",
       "fails": 0,
-      "detail": "HTTP 200"
+      "detail": "HTTP 500"
     },
     "custom_1791751243652_0": {
       "state": "ok",
@@ -296,7 +295,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/79cvAfSmWp0?autoplay=1",
       "since": "2026-10-12",
-      "fails": 32,
+      "fails": 33,
       "detail": "video no disponible"
     },
     "custom_1791753635642_0": {
