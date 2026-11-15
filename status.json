@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-14T15:50:55Z",
+  "checkedAt": "2026-11-15T16:23:49Z",
   "channels": {
     "cinetel": {
       "state": "ok",
@@ -66,10 +66,10 @@
       "detail": "HTTP 200"
     },
     "netflix": {
-      "state": "ok",
+      "state": "unknown",
       "url": "https://www.netflix.com/login",
       "fails": 0,
-      "detail": "HTTP 200"
+      "detail": "sin respuesta (other)"
     },
     "hbomax": {
       "state": "ok",
@@ -223,7 +223,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCECJDeK0MNapZbpaOzxrUPA&autoplay=1",
       "since": "2026-10-10",
-      "fails": 36
+      "fails": 37
     },
     "custom_1791597472305": {
       "state": "ok",
@@ -235,14 +235,14 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/k7TcDT3uxXw?autoplay=1",
       "since": "2026-10-12",
-      "fails": 34,
+      "fails": 35,
       "detail": "video no disponible"
     },
     "custom_1791682341359_0": {
       "state": "offline",
       "url": "https://www.youtube.com/embed/TBeng7YwG7U?autoplay=1",
       "since": "2026-11-12",
-      "fails": 3,
+      "fails": 4,
       "detail": "video no disponible"
     },
     "custom_1791737105395_0": {
@@ -295,7 +295,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/79cvAfSmWp0?autoplay=1",
       "since": "2026-10-12",
-      "fails": 34,
+      "fails": 35,
       "detail": "video no disponible"
     },
     "custom_1791753635642_0": {
@@ -309,10 +309,11 @@
       "fails": 0
     },
     "custom_1791753850515_0": {
-      "state": "unknown",
+      "state": "offline",
       "url": "https://www.youtube.com/embed/QlvCJ66V7gg?autoplay=1",
-      "fails": 0,
-      "detail": "oEmbed respondio 403"
+      "since": "2026-11-15",
+      "fails": 1,
+      "detail": "video no disponible"
     }
   }
 }
