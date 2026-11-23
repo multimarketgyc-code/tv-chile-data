@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-22T17:11:18Z",
+  "checkedAt": "2026-11-23T21:28:04Z",
   "channels": {
     "cinetel": {
       "state": "ok",
@@ -223,7 +223,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/live_stream?channel=UCECJDeK0MNapZbpaOzxrUPA&autoplay=1",
       "since": "2026-10-10",
-      "fails": 44
+      "fails": 45
     },
     "custom_1791597472305": {
       "state": "ok",
@@ -235,14 +235,14 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/k7TcDT3uxXw?autoplay=1",
       "since": "2026-10-12",
-      "fails": 42,
+      "fails": 43,
       "detail": "video no disponible"
     },
     "custom_1791682341359_0": {
       "state": "offline",
       "url": "https://www.youtube.com/embed/TBeng7YwG7U?autoplay=1",
       "since": "2026-11-12",
-      "fails": 11,
+      "fails": 12,
       "detail": "video no disponible"
     },
     "custom_1791737105395_0": {
@@ -296,7 +296,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/79cvAfSmWp0?autoplay=1",
       "since": "2026-10-12",
-      "fails": 42,
+      "fails": 43,
       "detail": "video no disponible"
     },
     "custom_1791753635642_0": {
@@ -313,7 +313,7 @@
       "state": "offline",
       "url": "https://www.youtube.com/embed/QlvCJ66V7gg?autoplay=1",
       "since": "2026-11-15",
-      "fails": 8,
+      "fails": 9,
       "detail": "video no disponible"
     }
   }
